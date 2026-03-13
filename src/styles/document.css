@@ -14,7 +14,7 @@
     --orange: rgb(232, 174, 83);
     --lightOrange: rgb(239, 197, 133);
     --darkOrange: rgb(190, 143, 67);
-    --gray: rgb(169, 158, 154);
+    --gray: rgba(169, 158, 154, 0.705);
     --beige: rgb(254 250 247)
 }
 
