@@ -50,6 +50,9 @@ nav {
     position: relative;
     z-index: 2;
     background: var(--beige);
+    background-image: url("../background-paper.png");
+    background-size: 170px;
+    background-blend-mode: color-burn;
     padding: 0 13px;
     font-size: 20px;
     font-weight: 600;
