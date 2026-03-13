@@ -8,6 +8,11 @@
     src: url("../TropicalAvenuePersonalUseOnly.ttf")
 }
 
+@font-face {
+    font-family: "Valeria";
+    src: url("../ValeriaBoldGrunge.ttf")
+}
+
 :root {
     --red: rgb(136, 60, 27);
     --darkRed: rgb(94, 42, 19);

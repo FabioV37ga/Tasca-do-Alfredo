@@ -7,6 +7,7 @@ nav {
     height: 43px;
     order: -1;
     max-width: 305px;
+    margin-top: 20px
 }
 
 .navigation {
@@ -32,6 +33,7 @@ nav {
 
 @media (min-width: 410px) {
     nav {
+        margin: 0;
         order: 0 !important;
         /* width: 300px */
         width: calc(100% - 110px)
