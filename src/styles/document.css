@@ -3,20 +3,28 @@
     src: url("../Montserrat-VariableFont_wght.ttf");
 }
 
+@font-face {
+    font-family: 'Tropical';
+    src: url("../TropicalAvenuePersonalUseOnly.ttf")
+}
+
 :root {
     --red: rgb(136, 60, 27);
     --darkRed: rgb(94, 42, 19);
     --orange: rgb(232, 174, 83);
     --lightOrange: rgb(239, 197, 133);
     --darkOrange: rgb(190, 143, 67);
+    --gray: rgb(169, 158, 154);
+    --beige: rgb(254 250 247)
 }
 
 html,
 body {
     margin: 0;
+    background-color: var(--beige);
 }
 
-main{
+main {
     margin: 0 auto;
     display: flex;
     justify-content: center;
