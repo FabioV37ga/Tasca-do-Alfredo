@@ -30,12 +30,6 @@ nav {
     font-family: "Montserrat";
 }
 
-@media (min-width: 373px){
-    .navigation{
-        font-size: 12px;
-    }
-}
-
 @media (min-width: 410px) {
     nav {
         order: 0 !important;

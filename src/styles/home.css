@@ -99,10 +99,25 @@ nav {
     /* margin-bottom: -10px */
 }
 
+@media (max-width: 325px) {
+    .welcome-logo {
+        font-size: 28px;
+    }
 
-@media (max-width: 347px) {
+    .welcome-text strong {
+        font-size: 12px;
+        margin-bottom: -2px;
+    }
+
     .welcome-text p {
-        font-size: 11px !important;
+        font-size: 11px !important
+    }
+}
+
+
+@media (min-width:320px) and (max-width: 350px) {
+    .welcome-text p {
+        font-size: 11px;
     }
 }
 
