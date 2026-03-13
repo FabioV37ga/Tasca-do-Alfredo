@@ -79,6 +79,11 @@ nav {
 }
 
 
+.welcome-text *{
+    padding: 0 4px
+}
+
+
 .welcome-text strong {
     font-size: 14px;
     height: 17px;
