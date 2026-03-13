@@ -1,0 +1,98 @@
+.upper-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.badge {
+
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+}
+
+.badge img {
+    width: 70px;
+}
+
+nav {
+    order: 2
+}
+
+
+.welcome {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+}
+
+.welcome-head {
+    width: 100%;
+    text-align: center;
+    color: var(--orange);
+    position: relative;
+}
+
+.welcome-head span {
+    position: relative;
+    z-index: 2;
+    background: white;
+    padding: 0 13px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.welcome-head::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: var(--orange);
+    width: 100%;
+    left: 0;
+    top: 50%
+}
+
+.welcome-logo {
+    color: var(--red);
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: -2px;
+    margin: 10px 0
+}
+
+
+.welcome-text{
+    color: var(--red);
+    font-size: 14px;
+}
+
+@media (min-width: 373px){
+    .welcome-text{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 410px) {
+    .upper-section {
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .badge {
+        margin: 0;
+        width: 70px;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}

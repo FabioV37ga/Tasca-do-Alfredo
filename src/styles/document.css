@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../Montserrat-VariableFont_wght.ttf");
+}
+
+:root {
+    --red: rgb(136, 60, 27);
+    --darkRed: rgb(94, 42, 19);
+    --orange: rgb(232, 174, 83);
+    --lightOrange: rgb(239, 197, 133);
+    --darkOrange: rgb(190, 143, 67);
+}
+
+html,
+body {
+    margin: 0;
+}
+
+main{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 92%
+}

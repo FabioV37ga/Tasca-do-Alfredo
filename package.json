@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Website do bar 'Tasca Do Alfredo'",
   "homepage": "https://github.com/FabioV37ga/Tasca-do-Alfredo#readme",
-  "bugs": {
-    "url": "https://github.com/FabioV37ga/Tasca-do-Alfredo/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FabioV37ga/Tasca-do-Alfredo.git"
