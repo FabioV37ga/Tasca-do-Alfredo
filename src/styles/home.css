@@ -6,7 +6,7 @@
 
 .badge {
 
-    margin-top: 10px;
+
     width: 100%;
     display: flex;
     justify-content: center;
@@ -79,7 +79,7 @@ nav {
 }
 
 
-.welcome-text *{
+.welcome-text * {
     padding: 0 4px
 }
 
@@ -115,6 +115,7 @@ nav {
 
     .badge {
         margin: 0;
+        margin-top: -10px;
         width: 70px;
     }
 
