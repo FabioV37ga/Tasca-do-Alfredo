@@ -173,6 +173,7 @@ nav {
 }
 
 @media (min-width: 750px) {
+
     .upper-section {
         width: 100%;
     }
@@ -182,7 +183,7 @@ nav {
         width: 205px
     }
 
-    .logo img{
+    .logo img {
         width: inherit
     }
 
@@ -195,4 +196,51 @@ nav {
     .badge img {
         width: inherit
     }
+
+    .welcome {
+        width: 400px;
+        position: absolute;
+        top: 400px;
+        top: 265px;
+        left: 35px;
+        justify-content: flex-start;
+    }
+
+    .welcome-head {
+        width: fit-content;
+    }
+
+    .welcome-head span {
+        padding: 0
+    }
+
+    .welcome-head::before {
+        display: none
+    }
+
+    .welcome-logo {
+        font-size: 52px;
+    }
+
+    .welcome-text {
+        font-size: 27px;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: flex-start;
+        line-height: 45px;
+        height: fit-content;
+    }
+
+    .welcome-text strong {
+        font-size: 27px;
+        margin-top: 0;
+        margin-left: 10px;
+        height: 30px;
+        font-weight: 600;
+    }
+
+    .welcome-text p:nth-child(1){
+        padding-left: 0 !important
+    }
+
 }
