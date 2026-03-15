@@ -171,3 +171,28 @@ nav {
         justify-content: center;
     }
 }
+
+@media (min-width: 750px) {
+    .upper-section {
+        width: 100%;
+    }
+
+    .logo {
+        flex-basis: 34%;
+        width: 205px
+    }
+
+    .logo img{
+        width: inherit
+    }
+
+    .badge {
+        flex-basis: 33%;
+        width: 65px;
+        margin-bottom: -15px;
+    }
+
+    .badge img {
+        width: inherit
+    }
+}

@@ -31,11 +31,53 @@ nav {
     font-family: "Montserrat";
 }
 
+.arrow {
+    display: none
+}
+
 @media (min-width: 410px) {
     nav {
         margin: 0;
         order: 0 !important;
         /* width: 300px */
         width: calc(100% - 110px)
+    }
+}
+
+@media (min-width: 750px) {
+    nav {
+        width: 100%;
+        max-width: 460px;
+    }
+
+    .navigation {
+        border: 0;
+        font-size: 14px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .navigation-item:last-child {
+        border: 2px solid var(--red);
+        padding: 10px 34px;
+        border-radius: 33px;
+    }
+
+    .navigation-item:last-child a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arrow {
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        letter-spacing: -9px;
+        font-size: 49px;
+        font-weight: 400;
+        margin-top: -9px;
+        margin-left: 11px;
+        align-items: center;
     }
 }
