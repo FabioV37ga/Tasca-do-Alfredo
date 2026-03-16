@@ -4,9 +4,6 @@
 1. Azuleijos em cima
 2. Navegação do lado
 
-- Indentidade visual
-1. Aguardando retorno
-
 # Páginas
 
 1. Homepage

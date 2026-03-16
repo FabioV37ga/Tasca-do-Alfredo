@@ -1,4 +1,14 @@
 1. considerar limitar a quantidade de itens de navegação em 3 ou 4.
     - remover cardapio?
 
-2. desenvolver responsividade desktop no index (home page)
+
+conceito:
+
+1. login de administrador
+    - requer backend e banco de dados
+    - conta pré criada no banco
+    - sistema de autenticação com criptografia
+    - página especial para autenticar admin
+        - realizar teste: 1. ao acessar url + rota executa código para criar*** os elementos relacionados
+        *** Elementos precisam ser criados com código não acessível para um usuário comum 
+    - permite acesso à integração com VR
