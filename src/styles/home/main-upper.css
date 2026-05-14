@@ -1,0 +1,108 @@
+main {
+    margin-top: 40px;
+    width: 100%;
+    height: 420px;
+    /* background: blue; */
+    display: flex;
+    justify-content: center;
+}
+
+.main-upper {
+    width: calc(100% - 160px);
+    position: relative;
+    max-width: 1920px;
+    display: flex;
+    /* background: red; */
+}
+
+.main-upper-left {
+    width: 50%;
+    height: 100%;
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+}
+
+.main-welcome-text {
+    color: var(--brown);
+    font-family: 'apple';
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.main-welcome-text img {
+    width: 70px
+}
+
+.main-welcome-text span {
+    font-size: 26px;
+}
+
+#home-slogan {
+    font-size: 71px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 10px;
+    color: var(--blue);
+    font-family: 'quay';
+    width: 500px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#home-slogan::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 75px;
+    bottom: 0;
+    background: var(--yellow);
+}
+
+#home-description {
+    margin-top: 28px;
+    font-family: sans-serif;
+    font-size: 20px;
+    width: 460px;
+    line-height: 30px;
+    color: var(--blue)
+}
+
+#meet-us {
+    background: var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+#meet-us span {
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-right: 15px;
+    text-transform: uppercase;
+}
+
+#meet-us img {
+    width: 25px
+}
+
+.main-upper-right img {
+    width: 880px;
+    margin-top: -52px;
+    position: absolute;
+    right: -80px;
+    filter: 
+    drop-shadow(0 0 0 var(--yellow)) 
+    drop-shadow(2px 0 0 var(--yellow)) 
+    drop-shadow(-4px 0 0 var(--yellow)) 
+    drop-shadow(0 -2px 0 var(--yellow)) 
+    drop-shadow(0 -2px 0 var(--yellow));
+}

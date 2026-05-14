@@ -1,6 +1,8 @@
 :root{
     --orange: #A25C2B;
+    --brown: #943F2A;
     --blue: #1B3550;
+    --yellow: #f0b53c;
 }
 
 
@@ -13,4 +15,9 @@ body, html{
 @font-face {
     font-family: 'apple';
     src: url(../AppleGaramond-Light.ttf);
+}
+
+@font-face {
+    font-family: 'quay';
+    src: url('../Quaaykop.otf');
 }

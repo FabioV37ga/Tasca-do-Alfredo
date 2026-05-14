@@ -18,6 +18,7 @@ header {
 
     height: calc(100% - 50px);
     width: calc(100% - 160px);
+    max-width: 1920px;
     /* background: orange; */
     justify-content: space-between;
     display: flex;
@@ -40,21 +41,23 @@ header {
 }
 
 #header-logo-since {
-    color: var(--orange);
+    color: var(--brown);
     margin: 5px 0 0 0;
-    font-family: 'Sans-serif';
+    font-family: 'apple';
+    font-size: 20px;
 }
 
 .header-navigation-list {
     /* background: red; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 66%
 }
 
 .header-navigation-list ul {
     width: 100%;
+    max-width: 760px;
     list-style: none;
     display: inherit;
     justify-content: space-around;
@@ -76,7 +79,7 @@ header {
     position: relative;
 }
 
-#project-link a span{
+#project-link a span {
     margin-left: 20px;
 }
 
