@@ -32,3 +32,8 @@ body, html{
     font-family: 'qs-base';
     src: url('../Quicksand_Book.otf');
 }
+
+@font-face {
+    font-family: 'tropical';
+    src: url("../tropical.ttf");
+}
