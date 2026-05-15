@@ -48,11 +48,11 @@ header {
 }
 
 .header-navigation-list {
-    /* background: red; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 66%
+    width: 66%;
+    height: 130px;
 }
 
 .header-navigation-list ul {
@@ -67,7 +67,7 @@ header {
     text-decoration: none;
     color: var(--blue);
     text-transform: uppercase;
-    font-family: sans-serif;
+    font-family: "qs-base";
     font-weight: 700;
 }
 
