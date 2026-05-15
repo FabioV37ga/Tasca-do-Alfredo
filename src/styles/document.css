@@ -3,6 +3,7 @@
     --brown: #943F2A;
     --blue: #1B3550;
     --yellow: #f0b53c;
+    --green: #445833;
 }
 
 
@@ -20,4 +21,14 @@ body, html{
 @font-face {
     font-family: 'quay';
     src: url('../Quaaykop.otf');
+}
+
+@font-face {
+    font-family: 'qs-strong';
+    src: url('../Quicksand_Bold.otf');
+}
+
+@font-face {
+    font-family: 'qs-base';
+    src: url('../Quicksand_Book.otf');
 }
