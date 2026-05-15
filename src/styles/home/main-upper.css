@@ -16,36 +16,6 @@
     flex-direction: column;
 }
 
-.main-welcome-text {
-    color: var(--brown);
-    font-family: 'apple';
-    display: flex;
-    justify-content: space-between;
-    width: 190px;
-    align-items: center;
-    text-transform: uppercase;
-}
-
-.main-welcome-text img {
-    width: 70px
-}
-
-.main-welcome-text span {
-    font-size: 26px;
-}
-
-#home-slogan {
-    font-size: 58px;
-    text-transform: uppercase;
-    margin: 0;
-    margin-top: 10px;
-    color: var(--blue);
-    font-family: 'quay';
-    width: 414px;
-    position: relative;
-    padding-bottom: 15px;
-}
-
 #home-slogan::before {
     content: '';
     position: absolute;
@@ -53,15 +23,6 @@
     width: 75px;
     bottom: 0;
     background: var(--yellow);
-}
-
-#home-description {
-    margin-top: 28px;
-    font-family: "qs-base";
-    font-size: 17px;
-    width: 340px;
-    line-height: 30px;
-    color: var(--blue)
 }
 
 #meet-us {
