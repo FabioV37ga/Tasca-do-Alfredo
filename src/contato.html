@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasca do Alfredo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/document.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/home/main-upper.css">
+    <link rel="stylesheet" href="styles/home/main-middle.css">
+    <link rel="stylesheet" href="styles/home/main-lower.css">
+    <link rel="stylesheet" href="styles/home/main.css">
+    <link rel="stylesheet" href="styles/home/footer.css">
 </head>
 
 <body>
@@ -19,26 +25,26 @@
             <div class="header-logo">
                 <img src="badge.png" id="header-logo-badge">
                 <img src="logo.png" id="header-logo-logo">
-                <p id="header-logo-since">Since 1977</p>
+                <p id="header-logo-since">Desde 1977</p>
             </div>
 
             <nav class="header-navigation-list">
                 <ul>
                     <li>
-                        <a href="#">Início</a>
+                        <a href="index.html">Início</a>
                     </li>
                     <li>
-                        <a href="#">Sobre</a>
+                        <a href="sobre.html">Sobre</a>
                     </li>
                     <li>
-                        <a href="#">Contato</a>
+                        <a href="contato.html" id="selected">Contato</a>
                     </li>
                     <li>
-                        <a href="#">Cardápio</a>
+                        <a href="cardapio.html">Cardápio</a>
                     </li>
                     <li id="project-link">
 
-                        <a href="#">
+                        <a href="projeto.html">
                             <img src="shard.png" alt="">
                             <span>
                                 Projeto
@@ -49,6 +55,37 @@
             </nav>
         </section>
     </header>
+
+    <footer>
+        <section class="footer-container">
+            <div class="footer-logo">
+                <img src="badge-white.png" id="footer-logo-badge">
+                <img src="logo-white.png" id="footer-logo-logo">
+            </div>
+            <div class="footer-info">
+                <p class="footer-info-title">
+                    Trabalho de Conclusão de Curso
+                </p>
+                <p class="footer-info-description">
+                    Por Marcella Sol, Design de Interiores.
+                </p>
+            </div>
+            <div class="footer-social">
+                <p id="footer-social-title">Entre em contato</p>
+                <div class="footer-social-links">
+                    <a href="https://www.instagram.com/marcellasol.interiores?igsh=MXdlbXZicTB3bHQwMQ%3D%3D" target="_blank">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcella-martins-sol-385551216" target="_blank">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-watermark">
+                <img src="shard.png" alt="">
+            </div>
+        </section>
+    </footer>
 </body>
 
 </html>

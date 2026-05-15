@@ -13,6 +13,19 @@ body, html{
     background-image: url('../paper.png'); 
 }
 
+#selected{
+    position: relative;
+}
+
+#selected::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: -13px;
+    background: var(--yellow);
+}
+
 @font-face {
     font-family: 'apple';
     src: url(../AppleGaramond-Light.ttf);

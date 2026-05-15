@@ -1,6 +1,6 @@
 .main-middle {
     width: 100%;
-    height: 115px;
+    height: 100px;
     background: var(--blue);
     margin-top: 23px;
     position: relative;
@@ -89,10 +89,14 @@
 }
 
 #middle-pattern-container {
-    height: 100%;
+    height: 100px;
     background-image: url("../../azulejo.png");
     background-size: 450px;
     width: 320px;
     position: absolute;
     right: 0;
+}
+
+#middle-pattern-container img {
+    width: 100px;
 }

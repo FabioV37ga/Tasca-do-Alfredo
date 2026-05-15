@@ -1,14 +1,15 @@
-.main-lower{
+.main-lower {
     width: calc(100% - 160px);
+    margin-top: 8px;
     display: flex;
 }
 
-.main-lower-content-left{
+.main-lower-content-left {
     /* background: red; */
     width: 450px
 }
 
-#lower-left-title{
+#lower-left-title {
     font-family: "tropical";
     text-transform: uppercase;
     font-size: 26px;
@@ -17,17 +18,18 @@
     margin-top: 10px;
 }
 
-#lower-left-text{
+#lower-left-text {
     color: var(--blue);
     margin-top: 0;
     font-family: "qs-base";
     font-size: 15px;
-    line-height: 30px;
+    line-height: 24px;
     width: 400px;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
+    margin-top: 6px;
 }
 
-#lower-left-button{
+#lower-left-button {
     padding: 10px 20px;
     background: var(--blue);
     color: white;
@@ -38,20 +40,20 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    width: 134px;
-    height: 15px;
+    width: 155px;
+    height: 31px;
 }
 
-#lower-left-button img{
+#lower-left-button img {
     width: 22px
 }
 
-#main-lower-content-right{
+#main-lower-content-right {
     width: 100%;
     padding-left: 10px;
 }
 
-.lower-cards{
+.lower-cards {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,30 +62,30 @@
     /* background: red; */
 }
 
-.lower-card{
+.lower-card {
     width: 185px;
-    height: 160px;
-    margin-top: 9px;
+    height: 168px;
+    margin-top: 14px;
     border-radius: 40px;
     border: 2px solid var(--yellow);
     background: #e9d7c291;
 }
 
-.card-head{
+.card-head {
     border-radius: 40px 40px 0 0;
-    height: 70px;
+    height: 61px;
     /* display: flex; */
     justify-content: center;
     text-align: center;
 }
 
-.card-icon{
+.card-icon {
     width: 62px;
     border-radius: 100%;
-    margin-top: -16px;
+    margin-top: -22px;
 }
 
-.card-title{
+.card-title {
     padding: 0;
     margin: 0;
     color: var(--blue);
@@ -93,15 +95,25 @@
     text-transform: uppercase;
 }
 
-.card-image{
+.card-image {
     background: var(--blue);
     width: 100%;
-    height: 90px;
+    height: 107px;
     border-radius: 0 0 40px 40px;
     overflow: hidden;
-
 }
 
-.card-image img{
-    display: none
+#card-prato img {
+    width: 185px;
+    margin-top: -29px;
+}
+
+#card-vinhos img {
+    width: 185px;
+    margin-top: -39px;
+}
+
+#card-petiscos img{
+    width: 185px;
+    margin-top: -29px;
 }
