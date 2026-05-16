@@ -125,7 +125,9 @@
     }
 
     .lower-cards {
-        height: 266px
+        width: 90%;
+        height: 266px;
+        margin-left: 90px;
     }
 
     .lower-card {
