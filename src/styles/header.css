@@ -89,3 +89,16 @@ header {
     left: 20px;
     top: 10px;
 }
+
+/* Responsividade: Desktop */
+@media (min-width: 1400px){
+    .header-navigation{
+        width: calc(100% - 320px)
+    }
+    #header-logo-badge{
+        width: 35px
+    }
+    #header-logo-logo{
+        width: 150px;
+    }
+}

@@ -113,7 +113,50 @@
     margin-top: -39px;
 }
 
-#card-petiscos img{
+#card-petiscos img {
     width: 185px;
     margin-top: -29px;
+}
+
+/* Responsividade: Desktop */
+@media (min-width: 1400px) {
+    .main-lower {
+        width: calc(100% - 320px)
+    }
+
+    .lower-cards {
+        height: 266px
+    }
+
+    .lower-card {
+        height: 200px;
+        width: 250px;
+        margin-top: -30px
+    }
+
+    .card-image {
+        width: 250px;
+        height: 140px
+    }
+
+    #card-ambiente img{
+        width: 290px;
+        margin-top: -45px;
+        margin-left: -35px
+    }
+
+    #card-prato img {
+        width: 250px;
+        margin-top: -29px;
+    }
+
+    #card-vinhos img {
+        width: 250px;
+        margin-top: -39px;
+    }
+
+    #card-petiscos img {
+        width: 250px;
+        margin-top: -29px;
+    }
 }

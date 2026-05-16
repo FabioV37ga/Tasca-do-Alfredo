@@ -100,3 +100,12 @@
 #middle-pattern-container img {
     width: 100px;
 }
+
+@media (min-width:1400px){
+    .main-middle{
+        margin-top: 10px;
+    }
+    .main-middle-content{
+        margin-left: 160px
+    }
+}

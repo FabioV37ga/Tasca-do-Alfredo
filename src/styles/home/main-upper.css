@@ -56,3 +56,11 @@
     filter:
         drop-shadow(0 0 0 var(--yellow)) drop-shadow(2px 0 0 var(--yellow)) drop-shadow(-4px 0 0 var(--yellow)) drop-shadow(0 -2px 0 var(--yellow)) drop-shadow(0 -2px 0 var(--yellow));
 }
+
+/* Responsividade: Desktop */
+@media (min-width: 1400px){
+    .main-upper{
+        width: calc(100% - 320px)
+    }
+    
+}

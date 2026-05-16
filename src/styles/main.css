@@ -46,3 +46,29 @@ main {
     line-height: 30px;
     color: var(--blue)
 }
+
+@media (min-width: 1400px){
+    html{
+        zoom: 75%
+    }
+    main{
+        margin-top: 10px
+    }
+    .main-welcome-text img{
+        width: 55px
+    }
+    .main-welcome-text span{
+        font-size: 20px;
+    }
+    #home-slogan{
+        font-size: 43px;
+        width: 300px;
+    }
+    #middle-pattern-container{
+        width: 490px
+    }
+    #home-description{
+        margin-top: 20px;
+    }
+    
+}
