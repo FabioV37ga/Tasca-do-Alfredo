@@ -1,0 +1,80 @@
+main {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#home-container {
+    width: calc(var(--paddingMobile) + 20px);
+}
+
+#home-upper {
+    display: flex;
+    height: 295px;
+}
+
+#home-upper-left {
+    /* background: pink; */
+    padding-top: 20px;
+    height: 100%;
+    width: 50%;
+}
+
+#home-upper-right {
+    /* background: blue; */
+    height: 100%;
+    width: 50%;
+}
+
+.home-title {
+    position: relative;
+    width: 180px;
+}
+
+.home-title::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 80px;
+    bottom: -10px;
+    background: var(--yellow)
+}
+
+.home-title-text {
+    width: 180px;
+    margin-bottom: 9px;
+}
+
+#home-meet_project-button {
+    background: var(--brown);
+    color: white;
+    font-family: 'qs-base';
+    text-decoration: none;
+    height: 33px;
+    width: 160px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#home-meet_project-button span {
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+#home-meet_project-button img {
+    width: 16px;
+    object-fit: contain;
+    height: auto;
+    flex-shrink: 0;
+}
+
+#home-upper-right{
+    background-image: url("../../interior-noite.jpeg");
+    background-size: cover;
+    background-position: center;
+    /* background-position-y: -600px;
+    background-position-x: -100px; */
+    background-repeat: no-repeat;
+    border-radius: 40px 0 0 0;
+}

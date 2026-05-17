@@ -1,0 +1,105 @@
+#home-middle {
+    width: calc(100% + 40px);
+    height: calc(100% - 294px);
+    background: var(--blue);
+    margin-top: -1px;
+    margin-left: -40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 175px;
+}
+
+#home-middle-pattern {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 42px;
+    background-image: url(../../azulejo.png);
+    background-size: 228px;
+}
+
+#home-middle-container {
+    width: calc(var(--paddingMobile) - 40px);
+    height: calc(100% - 42px);
+    display: flex;
+    align-items: center;
+}
+
+#home-middle-left {
+    width: 50%;
+    height: calc(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home-middle-left-content {
+    width: 155px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#home-middle-left-content h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'tropical';
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+#home-middle-left-content p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'qs-base';
+    font-size: 8px;
+}
+
+#home-middle-menu-button {
+    margin-bottom: -10px;
+    text-decoration: none;
+    color: var(--blue);
+    padding: 4px 8px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'qs-base';
+    border-radius: 3px;
+    text-transform: uppercase;
+    align-items: center;
+    font-size: 12px;
+}
+
+#home-middle-menu-button span {
+    margin: 0;
+    padding: 0;
+}
+
+#home-middle-menu-button img {
+    width: 15px;
+    object-fit: contain;
+    height: auto;
+    flex-shrink: 0;
+}
+
+#home-middle-right {
+    /* background: yellow; */
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#mobile-food-icons{
+    /* background: red; */
+    width: 100px;
+    height: 100px;
+    background-image: url(../../mobile-food-icons.png);
+    background-size: contain;
+}

@@ -4,229 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasca do Alfredo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/document.css">
+    <title>Início - Tasca do Alfredo</title>
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/home/main-upper.css">
-    <link rel="stylesheet" href="styles/home/main-middle.css">
-    <link rel="stylesheet" href="styles/home/main-lower.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/document.css">
+
+    <link rel="stylesheet" href="styles/home/home-middle.css">
+    <link rel="stylesheet" href="styles/home/home-upper.css">
 </head>
 
 <body>
     <header>
-        <section class="header-pattern">
-
-        </section>
-        <section class="header-navigation">
-
-            <div class="header-logo">
-                <img src="badge.png" id="header-logo-badge">
-                <img src="logo.png" id="header-logo-logo">
-                <p id="header-logo-since">Desde 1977</p>
+        <div id="header-pattern">
+        </div>
+        <section id="header-navigation">
+            <div id="header-logo">
+                <img src="badge-white.png" id="header-logo-badge">
+                <img src="logo-white.png" id="header-logo-image">
+                <p id="header-logo-since">
+                    Desde 1977
+                </p>
             </div>
-
-            <nav class="header-navigation-list">
-                <ul>
-                    <li>
-                        <a href="index.html" id="selected">Início</a>
-                    </li>
-                    <li>
-                        <a href="sobre.html">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="contato.html">Contato</a>
-                    </li>
-                    <li>
-                        <a href="cardapio.html">Cardápio</a>
-                    </li>
-                    <li id="project-link">
-
-                        <a href="projeto.html">
-                            <img src="shard.png" alt="">
-                            <span>
-                                Projeto
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div id="header-navigation-buttons">
+                <a href="#" class="navigation-button" id="project-navigation-button">
+                    <img src="shard-blue.png" alt="">
+                    <span>Projeto</span>
+                </a>
+                <a href="#" id="project-navigation-expand">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+            </div>
+            <img src="shard.png" id="header-watermark">
         </section>
     </header>
     <main>
-        <section class="main-upper">
-            <section class="main-upper-left">
-
-                <div class="main-welcome-text">
-                    <img src="shard-piece.png" alt="">
-                    <span>Bem-vindo</span>
+        <section id="home-container">
+            <section id="home-upper">
+                <div id="home-upper-left">
+                    <div id="page-welcome">
+                        <img src="shard-piece.png">
+                        <h1>Bem-vindo</h1>
+                    </div>
+                    <div class="page-title home-title">
+                        Tradição que se saboreia.
+                    </div>
+                    <p class="page-title-text home-title-text">
+                        Desde 1977, um ponto de encontro na Rua Roma.
+                        Aqui, a conversa é longa e todo mundo se sente em casa.
+                    </p>
+                    <a href="#" id="home-meet_project-button">
+                        <span>Conhecer a tasca</span>
+                        <img src="shard.png" alt="">
+                    </a>
                 </div>
+                <div id="home-upper-right">
 
-                <h2 id="home-slogan">
-                    Tradição que se saboreia.
-                </h2>
-
-                <p id="home-description">
-                    Desde 1977, um ponto de encontro na Rua Roma. Aqui, a conversa é longa e todo mundo se sente em
-                    casa.
-                </p>
-
-                <a href="projeto.html" id="meet-us">
-                    <span>Conhecer a Tasca</span>
-                    <img src="shard.png" alt="">
-                </a>
+                </div>
             </section>
-            <section class="main-upper-right">
-                <img src="home-image.png" alt="">
+            <section id="home-middle">
+                <div id="home-middle-container">
+                    <div id="home-middle-left">
+                        <div id="home-middle-left-content">
+                            <h1>
+                                Sabores que trazem memórias.
+                            </h1>
+                            <p>
+                                Nossa cozinha é feita do que importa:
+                                <br>
+                                Bons ingredientes, receitas que atravessam gerações.
+                            </p>
+                            <a href="#" id="home-middle-menu-button">
+                                <span>Ver cardápio</span>
+                                <img src="shard-blue.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="home-middle-right">
+                        <div id="mobile-food-icons"></div>
+                    </div>
+                </div>
+                <div id="home-middle-pattern">
+                </div>
             </section>
-        </section>
-
-        <section class="main-middle">
-            <div class="main-middle-content">
-                <ul id="home-middle-items">
-
-                    <li class="home-middle-item" id="first-middle-item">
-                        <div class="home-middle-item-image">
-                            <img src="home-icon-1.png" alt="">
-                        </div>
-                        <div class="home-middle-item-text-container">
-                            <p class="item-title">
-                                Conversa sem pressa
-                            </p>
-                            <p class="item-description">
-                                O tempo passa devagar do jeito que deve ser.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="home-middle-item">
-                        <div class="home-middle-item-image">
-                            <img src="home-icon-4.png" alt="">
-                        </div>
-                        <div class="home-middle-item-text-container">
-                            <p class="item-title">
-                                Gente de verdade
-                            </p>
-                            <p class="item-description">
-                                Fregueses que viram amigos de longa data.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="home-middle-item " id="last-middle-item">
-                        <div class="home-middle-item-image">
-                            <img src="home-icon-3.png" alt="">
-                        </div>
-                        <div class="home-middle-item-text-container">
-                            <p class="item-title">
-                                Vinho servido devagar
-                            </p>
-                            <p class="item-description">
-                                Porque o que é bom merece tempo.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-                <div id="middle-pattern-container">
-                    <img src="middle-border.png" alt="">
-                </div>
-            </div>
-        </section>
-        <section class="main-lower">
-            <div class="main-lower-content-left">
-                <h2 id="lower-left-title">
-                    Sabores que trazem memórias.
-                </h2>
-                <p id="lower-left-text">
-                    Nossa cozinha é feita do que importa:
-                    <br>
-                    bons ingredientes, receitas que atravessam
-                    gerações.
-                </p>
-                <a href="cardapio.html" id="lower-left-button">
-                    ver cardápio
-                    <img src="shard.png" alt="">
-                </a>
-            </div>
-            <div id="main-lower-content-right">
-                <div class="lower-cards">
-                    <div class="lower-card">
-                        <div class="card-head">
-                            <img src="home-main-lower-icon-4.png" alt="" class="card-icon">
-                            <p class="card-title">
-                                ambiente
-                            </p>
-                        </div>
-                        <div class="card-image" id="card-ambiente">
-                            <img src="fachada.png" alt="">
-                        </div>
-                    </div>
-                    <div class="lower-card">
-                        <div class="card-head">
-                            <img src="home-main-lower-icon-3.png" alt="" class="card-icon">
-                            <p class="card-title">
-                                pratos
-                            </p>
-                        </div>
-                        <div class="card-image" id="card-prato">
-                            <img src="home-prato.png" alt="">
-                        </div>
-                    </div>
-                    <div class="lower-card">
-                        <div class="card-head">
-                            <img src="home-main-lower-icon-2.png" alt="" class="card-icon">
-                            <p class="card-title">
-                                vinhos
-                            </p>
-                        </div>
-                        <div class="card-image" id="card-vinhos">
-                            <img src="home-vinho.png" alt="">
-                        </div>
-                    </div>
-                    <div class="lower-card">
-                        <div class="card-head">
-                            <img src="home-main-lower-icon-1.png" alt="" class="card-icon">
-                            <p class="card-title">
-                                petiscos
-                            </p>
-                        </div>
-                        <div class="card-image" id="card-petiscos">
-                            <img src="home-entrada.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </section>
     </main>
     <footer>
-        <section class="footer-container">
-            <div class="footer-logo">
+        <section id="footer-container">
+            <div id="footer-logo">
                 <img src="badge-white.png" id="footer-logo-badge">
-                <img src="logo-white.png" id="footer-logo-logo">
+                <img src="logo-white.png" id="footer-logo-image">
             </div>
-            <div class="footer-info">
-                <p class="footer-info-title">
-                    Trabalho de Conclusão de Curso
-                </p>
-                <p class="footer-info-description">
-                    Por Marcella Sol, Design de Interiores.
-                </p>
-            </div>
-            <div class="footer-social">
-                <p id="footer-social-title">Entre em contato</p>
-                <div class="footer-social-links">
-                    <a href="https://www.instagram.com/marcellasol.interiores?igsh=MXdlbXZicTB3bHQwMQ%3D%3D" target="_blank">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/marcella-martins-sol-385551216" target="_blank">
-                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                    </a>
+            <div id="footer-info">
+                <div id="footer-info-text">
+                    <h3>
+                        Trabalho de Conclusão de Curso
+                    </h3>
+                    <p>
+                        Por Marcella Sol, Design de Interiores.
+                    </p>
+                </div>
+                <div id="footer-info-contact">
+                    <h3>
+                        Entre em Contato:
+                    </h3>
+                    <div id="footer-links">
+                        <a href="#" class="footer-link">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="footer-link">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-watermark">
-                <img src="shard.png" alt="">
-            </div>
+            <img src="shard.png" id="footer-watermark">
         </section>
     </footer>
 </body>

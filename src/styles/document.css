@@ -1,23 +1,31 @@
-:root{
+:root {
     --orange: #A25C2B;
     --brown: #943F2A;
     --blue: #1B3550;
     --yellow: #f0b53c;
     --green: #445833;
+    --paddingMobile: calc(100% - 40px)
 }
 
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
 
-body, html{
+body,
+html {
+    height: 100dvh;
     margin: 0;
     padding: 0;
-    background-image: url('../paper.png'); 
+    overflow-x: hidden;
+    background: var(--green);
 }
 
-#selected{
+#selected {
     position: relative;
 }
 
-#selected::before{
+#selected::before {
     content: '';
     position: absolute;
     height: 3px;
