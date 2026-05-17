@@ -57,6 +57,10 @@ header {
     margin-top: 8px;
 }
 
+.desktop-project-navigation-button {
+    display: none;
+}
+
 #header-navigation-buttons {
     /* background: gold; */
     display: flex;
@@ -98,4 +102,63 @@ header {
     width: 290px;
     top: -50px;
     right: -50px;
+}
+
+@media (min-width: 1300px) {
+    header {
+        height: 130px;
+        margin-bottom: -1px
+    }
+
+    #header-logo{
+        flex-direction: row;
+    }
+
+    #header-logo-badge {
+        width: 37px
+    }
+
+    #header-logo-image {
+        width: 118px;
+        margin-right: 20px;
+    }
+
+    #header-logo-since {
+        font-size: 12px;
+        width: 100px;
+    }
+
+    #project-navigation-button {
+        padding: 15px 35px;
+        font-size: 18px;
+    }
+
+    #project-navigation-button img {
+        width: 23px;
+        margin-right: 20px;
+    }
+
+    #project-navigation-expand {
+        display: none;
+    }
+
+    .desktop-project-navigation-button {
+        display: initial;
+        text-decoration: none;
+        color: white;
+        font-family: 'qs-base';
+        margin-right: 60px;
+        font-size: 21px;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    #selected::before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        background: var(--yellow);
+        width: 30px;
+
+    }
 }

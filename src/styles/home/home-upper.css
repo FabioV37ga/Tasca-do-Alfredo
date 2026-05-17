@@ -22,7 +22,7 @@ main {
 #home-upper-right {
     /* background: blue; */
     height: 100%;
-    width: 50%;
+    width: 63%;
 }
 
 .home-title {
@@ -69,12 +69,55 @@ main {
     flex-shrink: 0;
 }
 
-#home-upper-right{
+#home-upper-right {
     background-image: url("../../interior-noite.jpeg");
     background-size: cover;
     background-position: center;
     /* background-position-y: -600px;
     background-position-x: -100px; */
     background-repeat: no-repeat;
-    border-radius: 40px 0 0 0;
+    border-radius: 40px 0 0 40px;
+}
+
+@media (min-width: 1300px) {
+    #home-upper {
+        height: 465px;
+    }
+
+    #home-upper-left {
+        width: 37%;
+    }
+
+    .home-title {
+        width: 450px
+    }
+
+    .home-title-text {
+        width: 420px;
+        font-size: 22px;
+        margin: 30px 0 30px 0
+    }
+
+    #home-meet_project-button {
+        margin-top: 20px;
+        width: 260px;
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #home-meet_project-button span {
+        font-size: 20px;
+    }
+
+    #home-meet_project-button img {
+        width: 30px;
+    }
+}
+
+
+@media (min-width:1400px) and (min-height: 900px) {
+    #home-upper {
+        margin-left: -134px
+    }
 }

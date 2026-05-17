@@ -1,13 +1,14 @@
 #home-middle {
-    width: calc(100% + 40px);
+    width: calc(100% + 60px);
     height: calc(100% - 294px);
-    background: var(--blue);
+    /* background: var(--blue); */
     margin-top: -1px;
     margin-left: -40px;
     display: flex;
     justify-content: center;
     position: relative;
-    min-height: 175px;
+    flex-direction: column;
+    min-height: 225px;
 }
 
 #home-middle-pattern {
@@ -20,33 +21,36 @@
 }
 
 #home-middle-container {
-    width: calc(var(--paddingMobile) - 40px);
-    height: calc(100% - 42px);
+    height: calc(100% - 30px);
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
 #home-middle-left {
-    width: 50%;
-    height: calc(100%);
+    width: 100%;
+    height: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 #home-middle-left-content {
-    width: 155px;
-    height: 70%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
 #home-middle-left-content h1 {
-    color: white;
+    color: var(--blue);
     text-transform: uppercase;
+    text-align: center;
     font-family: 'tropical';
     font-size: 15px;
+    width: 166px;
     margin: 0;
     padding: 0;
 }
@@ -54,13 +58,14 @@
 #home-middle-left-content p {
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--blue);
     font-family: 'qs-base';
-    font-size: 8px;
+    text-align: center;
+    font-size: 9px;
 }
 
 #home-middle-menu-button {
-    margin-bottom: -10px;
+    margin-bottom: -13px;
     text-decoration: none;
     color: var(--blue);
     padding: 4px 8px;
@@ -96,10 +101,231 @@
 
 }
 
-#mobile-food-icons{
+#mobile-food-icons {
+    margin-top: 20px;
+    width: 100%;
+    height: 80px;
     /* background: red; */
-    width: 100px;
-    height: 100px;
-    background-image: url(../../mobile-food-icons.png);
-    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+
+#mobile-food-icons img {
+    width: 40px;
+}
+
+.food-icon {
+    display: flex;
+    width: 79px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'qs-base';
+    color: var(--blue);
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.desktop-horizontal-bar {
+    display: none;
+}
+
+@media (min-width: 1300px) {
+    #home-middle-pattern {
+        display: none;
+    }
+
+    .desktop-horizontal-bar {
+        height: 120px;
+        width: 100%;
+        position: absolute;
+        background: var(--blue);
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .desktop-horizontal-bar-content {
+        height: 100%;
+        width: calc(100% - 40px);
+        display: flex;
+        /* background: orange; */
+        position: relative;
+    }
+
+    .desktop-horizontal-bar-pattern {
+        position: absolute;
+        right: 2px;
+        width: 400px;
+        height: 100%;
+        background-image: url(../../azulejo.png);
+        background-size: 442px;
+    }
+
+    .desktop-horizontal-bar-pattern img {
+        height: 100%
+    }
+
+    .desktop-horizontal-bar-items {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 950px;
+        /* background: orange; */
+        z-index: 2;
+    }
+
+    .hbar-item {
+        width: 310px;
+        /* background: blueviolet; */
+        height: 120px;
+        display: flex;
+        position: relative;
+
+    }
+
+    .hbar-item img {
+        width: 90px;
+        object-fit: contain;
+        height: auto;
+        margin-right: 5px;
+        flex-shrink: 0;
+    }
+
+    #hbar-middle-item::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 70px;
+        background: white;
+        left: 0;
+        top: 25px;
+    }
+
+    #hbar-middle-item::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 70px;
+        background: white;
+        right: 0;
+        top: 25px;
+    }
+
+
+    .hbar-item-text {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hbar-item-text>* {
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+
+    .hbar-item-text h1 {
+        font-family: "qs-strong";
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .hbar-item-text p {
+        font-family: "qs-base";
+        font-size: 15px;
+    }
+
+    #home-middle {
+        flex-direction: row;
+        margin-bottom: 30px;
+        height: calc(100% - 379px);
+    }
+
+    #home-middle-container {
+        margin-top: 130px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: normal;
+        width: calc(100% - 80px)
+    }
+
+    #home-middle-left {
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 58%;
+    }
+
+    #home-middle-left-content {
+        height: 160px;
+        justify-content: space-between;
+        align-items: self-start;
+        /* background: blue; */
+        width: 400px;
+    }
+
+    #home-middle-left-content>* {
+        text-align: left !important;
+    }
+
+    #home-middle-left-content h1 {
+        font-size: 23px;
+        width: 300px;
+    }
+
+    #home-middle-left-content p {
+        font-size: 20px;
+    }
+
+    #home-middle-left-content a {
+        font-size: 20px;
+    }
+
+    #home-middle-right {
+        height: 160px;
+        align-items: self-start;
+    }
+
+    #mobile-food-icons {
+        justify-content: space-between;
+        margin: 0;
+
+    }
+
+    .food-icon {
+        width: 180px;
+        font-size: 17px;
+    }
+
+    .food-icon img {
+        width: 180px !important
+    }
+
+}
+
+@media (min-width:1400px) and (min-height: 900px) {
+    #home-middle-left {
+        zoom: 150%
+    }
+
+    #home-middle-right {
+        zoom: 134%
+    }
+
+    #home-middle-container {
+        margin-top: 160px;
+        width: var(--paddingMobile)
+    }
+
+    #home-middle{
+        margin-left: -280px;
+        width: calc(100% + 281px)
+    }
+
+    .desktop-horizontal-bar-content{
+        width: calc(100% - 144px)
+    }
+
+    .desktop-horizontal-bar-pattern{
+        width: 780px;
+    }
 }

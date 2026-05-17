@@ -1,4 +1,4 @@
-main{
+main {
     width: 100%;
     /* background: red; */
     display: flex;
@@ -30,7 +30,7 @@ main{
     color: var(--brown);
 }
 
-.page-title{
+.page-title {
     font-family: 'quay';
     font-weight: 900;
     color: var(--blue);
@@ -39,9 +39,35 @@ main{
     margin-top: 10px;
 }
 
-.page-title-text{
+.page-title-text {
     font-family: 'qs-base';
     font-size: 13px;
     color: var(--blue);
     line-height: 23px;
+}
+
+@media (min-width: 1300px) {
+    main {
+        height: calc(100% - 100px - 130px);
+    }
+
+    #page-welcome {
+        width: 180px;
+    }
+
+    #page-welcome img {
+        width: 60px;
+    }
+
+    #page-welcome h1 {
+        font-size: 30px;
+    }
+
+    .page-title {
+        font-size: 60px;
+    }
+
+    .page-title-text {
+        font-size: 20px;
+    }
 }
