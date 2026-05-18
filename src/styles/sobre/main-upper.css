@@ -1,0 +1,105 @@
+#page-welcome {
+    width: 126px;
+}
+
+.sobre-upper {
+    width: calc(100% - 20px);
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.sobre-title {
+    width: 100%;
+}
+
+.sobre-upper-left {
+    width: 57%
+}
+
+.sobre-upper-right {
+    width: 40%;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 180px;
+}
+
+.sobre-upper-right img:nth-child(1) {
+    width: 94%;
+}
+
+.sobre-upper-right img:nth-child(2) {
+    width: 94%;
+}
+
+.sobre-upper-right img:nth-child(3) {
+    width: 100%;
+}
+
+.sobre-title-text {
+    margin: 25px 0 0 0;
+    width: 100%;
+    line-height: 14px;
+    font-size: 9.5px;
+    text-align: justify;
+    margin-bottom: -18px;
+}
+
+.sobre-lower {
+    width: calc(100% - 20px);
+    margin-top: 20px;
+    height: 62px;
+    opacity: 70%;
+}
+
+.text-footer-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#text-footer-image {
+    width: 140px;
+}
+
+@media (min-width: 1300px) {
+    #page-welcome {
+        width: 210px !important;
+    }
+
+    .sobre-title-text {
+        font-size: 17px;
+        line-height: 25px;
+        margin-bottom: -5px;
+        width: 90%
+    }
+
+    .sobre-upper-left {
+        width: 45%;
+    }
+
+    .mobile-sobre-pic{
+        display: none;
+    }
+
+    .sobre-upper-right{
+        width: 55%;
+        height: 795px;
+        max-width: none;
+        background-color: gainsboro;
+        margin-top: -20px;
+    }
+
+    .text-footer-image-container{
+        width: 90%;
+    }
+
+    #text-footer-image{
+        width: 380px;
+        margin-top: -50px;
+        opacity: 55%;
+    }
+}

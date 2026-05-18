@@ -15,3 +15,15 @@ u("#menu-close").on("click", ()=>{
 u("#outside-menu").on("click", ()=>{
     closeMenu()
 })
+
+// Adiciona função para fechar o menu quando clicar em um link do menu
+const mobileNavLinks = u(".mobile-nav-item a").nodes as HTMLAnchorElement[]
+
+mobileNavLinks.forEach(link => {
+    u(link).on("click", () => {
+        closeMenu()
+    })
+})
+
+
+// ↑ provavelmente vou refatorar isso num arquivo separado.

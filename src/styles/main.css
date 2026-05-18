@@ -40,6 +40,26 @@ main {
     margin-top: 10px;
 }
 
+.page-subtitle {
+    font-family: 'qs-base';
+    font-size: 13px;
+    color: var(--brown);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    position: relative;
+}
+
+.page-subtitle::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    width: 80px;
+    background: var(--yellow);
+    height: 3px;
+}
+
 .page-title-text {
     font-family: 'qs-base';
     font-size: 13px;
@@ -70,5 +90,9 @@ main {
 
     .page-title-text {
         font-size: 20px;
+    }
+
+    .page-subtitle {
+        font-size: 28px;
     }
 }

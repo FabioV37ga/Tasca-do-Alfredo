@@ -1,0 +1,7 @@
+#sobre-container{
+    width: 100%;
+    display: flex;
+    align-items: self-end;
+    flex-direction: column;
+}
+

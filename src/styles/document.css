@@ -60,12 +60,18 @@ html {
     src: url("../tropical.ttf");
 }
 
-a{
-    cursor: pointer !important
+a {
+    cursor: pointer !important;
+    -webkit-tap-highlight-color: transparent;
+    outline: none
 }
 
-@media(max-width: 1300px){
-    a span{
+a:active {
+    outline: none
+}
+
+@media(max-width: 1300px) {
+    a span {
         transform: translateY(1.5px)
     }
 }
@@ -78,14 +84,16 @@ a{
     }
 }
 
-@media (min-width:1400px) and (min-height: 900px){
-    :root{
+@media (min-width:1400px) and (min-height: 900px) {
+    :root {
         --paddingMobile: calc(100% - 300px)
     }
-    html{
+
+    html {
         zoom: 80%
     }
-    body{
+
+    body {
         height: 125dvh;
     }
 }
