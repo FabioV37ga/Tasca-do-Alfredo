@@ -1,0 +1,85 @@
+@media (max-width: 1300px) {
+    #desktop-sobre-pictures {
+        display: none !important;
+    }
+}
+
+#desktop-sobre-pictures {
+    margin-right: -1px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+}
+
+.desktop-sobre-pictures-upper {
+    height: 45%;
+    width: 100%;
+    /* background: orange; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../fachada2.jpeg);
+    background-position-y: -180px;
+}
+
+.desktop-sobre-pictures-mid {
+    height: 27.5%;
+    width: 100%;
+    /* background: green; */
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.desktop-sobre-pictures-lower {
+    height: 27.5%;
+    width: 100%;
+    /* background: blue; */
+    display: flex;
+}
+
+.overlapping-image {
+    position: absolute;
+    height: 123%;
+    width: 40%;
+    /* background: black; */
+    background: url(../../picture-sobre.png);
+    bottom: -25px;
+    left: -76px;
+    background-size: contain;
+    background-position-x: 17px;
+    background-repeat: no-repeat;
+}
+
+.phrase-container {
+    width: 33.3%;
+    height: 100%;
+    background: var(--green);
+}
+
+.mid-picture {
+    width: 39.3%;
+    height: 100%;
+    background-image: url(../../desktop-mid-image-sobre.png);
+    background-size: 115%;
+    background-repeat: no-repeat;
+}
+
+.bottom-info-container {
+    width: 66.6%;
+    height: 100%;
+    background: url(../../texture-sobre.png);
+    background-size: 87%;
+    /* background: red */
+}
+
+.bottom-picture {
+    width: 38.3%;
+    height: 100%;
+    background: url(../../mid-image-sobre.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -47px;
+}
