@@ -2,8 +2,12 @@
 header {
     background: var(--blue);
     width: 100%;
-    overflow: hidden;
-    position: relative;
+    background-image: url(../../shard-transparent.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-x: 132%;
+    background-position-y: -25px;
+    background-size: 250px;
 }
 
 #header-pattern {
@@ -59,7 +63,7 @@ header {
     width: 65px;
 }
 
-.desktop-project-navigation-button {
+.desktop-navigation-button {
     display: none;
 }
 
@@ -96,14 +100,6 @@ header {
     z-index: 2;
     color: white;
     font-size: 35px;
-}
-
-#header-watermark {
-    position: absolute;
-    opacity: 8%;
-    width: 290px;
-    top: -50px;
-    right: -50px;
 }
 
 @media (min-width: 1300px) {
@@ -144,7 +140,7 @@ header {
         display: none;
     }
 
-    .desktop-project-navigation-button {
+    .desktop-navigation-button {
         display: initial;
         text-decoration: none;
         color: white;

@@ -77,6 +77,7 @@
     text-transform: uppercase;
     align-items: center;
     font-size: 12px;
+    height: 23px;
 }
 
 #home-middle-menu-button span {
@@ -127,6 +128,29 @@
 
 .desktop-horizontal-bar {
     display: none;
+}
+
+@media (min-width: 400px) {
+    #home-middle-right {
+        height: 45%;
+    }
+
+    #home-middle-left {
+        height: 55%;
+        margin-bottom: 10px;
+    }
+
+    #home-middle-left-content h1 {
+        font-size: 20px;
+        width: 300px;
+    }
+
+    #home-middle-left-content p {
+        width: 350px;
+        font-size: 14px;
+
+    }
+
 }
 
 @media (min-width: 1300px) {
@@ -274,6 +298,7 @@
 
     #home-middle-left-content p {
         font-size: 20px;
+        width: 390px;
     }
 
     #home-middle-left-content a {
@@ -283,6 +308,7 @@
     #home-middle-right {
         height: 160px;
         align-items: self-start;
+        margin-top: -9px;
     }
 
     #mobile-food-icons {
@@ -316,16 +342,16 @@
         width: var(--paddingMobile)
     }
 
-    #home-middle{
+    #home-middle {
         margin-left: -280px;
         width: calc(100% + 281px)
     }
 
-    .desktop-horizontal-bar-content{
+    .desktop-horizontal-bar-content {
         width: calc(100% - 144px)
     }
 
-    .desktop-horizontal-bar-pattern{
+    .desktop-horizontal-bar-pattern {
         width: 780px;
     }
 }

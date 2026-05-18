@@ -7,6 +7,7 @@
     --paddingMobile: calc(100% - 40px)
 }
 
+
 body {
     display: flex;
     flex-wrap: wrap;
@@ -57,6 +58,16 @@ html {
 @font-face {
     font-family: 'tropical';
     src: url("../tropical.ttf");
+}
+
+a{
+    cursor: pointer !important
+}
+
+@media(max-width: 1300px){
+    a span{
+        transform: translateY(1.5px)
+    }
 }
 
 @media (min-width: 1300px) {

@@ -33,15 +33,15 @@ footer {
     background: rgba(255, 255, 255, 0.5);
     width: 100%;
     position: absolute;
-    bottom: -5px;
+    bottom: -8px;
 }
 
 #footer-logo-badge {
-    width: 28px;
+    width: 24px;
 }
 
 #footer-logo-image {
-    width: 80px;
+    width: 68px;
 }
 
 #footer-info {
@@ -88,7 +88,9 @@ footer {
 
 #footer-links {
     display: flex;
-    width: fit-content
+    width: fit-content;
+    min-width: 23px;
+    max-height: 23px;
 }
 
 #footer-info-contact a {

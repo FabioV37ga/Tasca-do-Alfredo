@@ -5,6 +5,7 @@ main {
     justify-content: center;
     background-image: url('../paper.png');
     background-size: 90%;
+    min-height: 550px;
 }
 
 #page-welcome {
