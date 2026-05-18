@@ -18,6 +18,8 @@ Sobre
     6. picture-sobre-2.png
     7. picture-sobre-3.png
     8. esboco.png
+    desktop only:
+        
 
 
 
