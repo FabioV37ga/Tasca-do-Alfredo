@@ -70,8 +70,6 @@ var loadedAssets: number = 0;
 function getAssetsToPreload(page: string, device: string) {
     let assetsToPreload = generalAssets.filter(asset => asset.page === 'all' || asset.page === page)
 
-    assetLength = assetsToPreload.length
-
     if (device === 'mobile') {
         assetsToPreload = assetsToPreload.concat(
             mobileAssets.filter(asset => asset.page === page)
@@ -84,13 +82,14 @@ function getAssetsToPreload(page: string, device: string) {
         )
     }
 
+    console.log(`Assets a serem pré-carregados: ${assetsToPreload.length} para a página ${page} no dispositivo ${device}`)
+    assetLength = assetsToPreload.length
+
     return assetsToPreload
 }
 
 // Função principal chamada pelo app para pré-carregar imagens
 export async function preload() {
-    console.log(`Iniciando preload, página: ${currentPage}, dispositivo: ${deviceType}`)
-
     const assetsToPreload = getAssetsToPreload(currentPage, deviceType)
 
     await Promise.all(
@@ -118,7 +117,15 @@ export async function preload() {
     console.log('Assets carregados.')
 }
 
-function logProgress(){
-    const progress = (loadedAssets / assetLength) * 100
+/*
+    assetsLength ----- 100
+    loadedAssets ----- x
+
+    loadedAssets * 100 / assetsLength = progresso em porcentagem
+
+*/
+
+function logProgress() {
+    const progress = (loadedAssets * 100) / assetLength
     console.log(`Progresso do preload: ${progress.toFixed(2)}%`)
 }
