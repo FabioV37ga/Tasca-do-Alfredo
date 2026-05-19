@@ -2,7 +2,7 @@
     "compilerOptions": {
         "rootDir": "src",
         "outDir": "dist",
-        "target": "ES6",
+        "target": "es2017",
         "noEmitOnError": true,
         "noImplicitAny": true,
         "removeComments": true,
