@@ -63,6 +63,7 @@ function getDeviceType(width: number) {
 }
 
 var assetLength: number = 0;
+var loadedAssets: number = 0;
 
 // Retorna a lista de assets que devem ser carregados agora
 function getAssetsToPreload(page: string, device: string) {
@@ -101,7 +102,8 @@ export async function preload() {
                 // para que o preload não fique pendente indefinidamente.
                 img.onload = () => {
                     // console.log(`Asset loaded: ${src.asset}`)
-                    logProgress(assetsToPreload.indexOf(src) + 1, assetLength)
+                    loadedAssets++
+                    logProgress()
                     resolve()
                 }
 
@@ -115,7 +117,7 @@ export async function preload() {
     console.log('Assets carregados.')
 }
 
-function logProgress(loaded: number, total: number) {
-    const percentage = Math.round((loaded / total) * 100)
-    console.log(`Progresso do preload: ${percentage}% (${loaded}/${total})`)
+function logProgress(){
+    const progress = (loadedAssets / assetLength) * 100
+    console.log(`Progresso do preload: ${progress.toFixed(2)}%`)
 }
