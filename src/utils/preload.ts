@@ -12,6 +12,7 @@ const generalAssets: assetList[] = [
     { asset: '/shard.png', page: 'all' },
     { asset: '/shard-piece.png', page: 'all' },
     { asset: '/interior-noite.jpeg', page: 'home' },
+    { asset: '/azulejo.png', page: 'home' },
     { asset: '/food-icon-1.png', page: 'home' },
     { asset: '/food-icon-2.png', page: 'home' },
     { asset: '/food-icon-3.png', page: 'home' },
