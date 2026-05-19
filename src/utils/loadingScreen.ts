@@ -31,8 +31,10 @@ export function initializeLoadingScreen() {
     var loadTextChangeInterval = setInterval(() => {
         var text = u("#loading-text").first() as HTMLElement
 
-        if (loadingScreen) {
+        if (u(".loading-screen").length > 0) {
             text.textContent = loadingTexts[currentTextIndex]
+        }else{
+            clearInterval(loadTextChangeInterval)
         }
 
         currentTextIndex++
