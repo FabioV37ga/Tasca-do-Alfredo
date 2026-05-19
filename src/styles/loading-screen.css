@@ -91,3 +91,17 @@
         transform: scale(1);
     }
 }
+
+@media (min-width: 1300px) {
+    .loading-screen-content{
+        width: 40%
+    }
+
+    .loading-screen-logo{
+        height: initial
+    }
+
+    #loading-text{
+        font-size: 30px;
+    }
+}
