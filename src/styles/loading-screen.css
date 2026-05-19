@@ -60,7 +60,7 @@
 .loading-screen-progress-fill{
     background: white;
     height: 100%;
-    width: 50%;
+    width: 0%;
     animation: fill 3s ease-in-out forwards;
     border-radius: 7px;
 }
