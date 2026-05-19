@@ -22,6 +22,10 @@ html {
     background: var(--green);
 }
 
+html{
+    display: none;
+}
+
 #selected {
     position: relative;
 }

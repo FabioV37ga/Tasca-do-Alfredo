@@ -28,6 +28,8 @@ mobileNavLinks.forEach(link => {
 
 await preload()
 
+
+document.querySelector("html")!.style.display = 'initial'
 alert("assets carregados, iniciando app")
 
 // ↑ provavelmente vou refatorar isso num arquivo separado.
