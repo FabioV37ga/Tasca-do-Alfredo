@@ -1,6 +1,7 @@
 import u from "umbrellajs";
 import { closeMenu, expandMenu } from "./utils/handle-mobile-menu.js";
 import { preload } from "./utils/preload.js";
+import { initializeLoadingScreen } from "./utils/loadingScreen.js";
 
 // Adiciona função de click ao ícone de expandir menu
 u("#project-navigation-expand").on("click", ()=>{
@@ -25,6 +26,8 @@ mobileNavLinks.forEach(link => {
         closeMenu()
     })
 })
+
+initializeLoadingScreen()
 
 await preload()
 

@@ -1,3 +1,5 @@
+import { updateProgressBar } from "./loadingScreen.js";
+
 // Define o formato de cada asset usado no preload
 interface assetList {
     asset: string; // caminho do arquivo de imagem
@@ -127,5 +129,6 @@ export async function preload() {
 
 function logProgress() {
     const progress = (loadedAssets * 100) / assetLength
+    updateProgressBar(progress)
     console.log(`Progresso do preload: ${progress.toFixed(2)}%`)
 }

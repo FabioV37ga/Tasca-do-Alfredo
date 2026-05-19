@@ -2,6 +2,7 @@
     --orange: #A25C2B;
     --brown: #943F2A;
     --blue: #1B3550;
+    --whiteblue: #3e638b;
     --yellow: #f0b53c;
     --green: #445833;
     --paddingMobile: calc(100% - 40px)
@@ -22,9 +23,9 @@ html {
     background: var(--green);
 }
 
-html{
+/* html{
     display: none;
-}
+} */
 
 #selected {
     position: relative;
