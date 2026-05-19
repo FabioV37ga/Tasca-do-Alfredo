@@ -6,6 +6,7 @@ main {
     background-image: url('../paper.png');
     background-size: 90%;
     min-height: 550px;
+    height: calc(100% - 134px - 60px) !important;
 }
 
 #page-welcome {

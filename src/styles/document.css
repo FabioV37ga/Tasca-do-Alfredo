@@ -60,6 +60,11 @@ html {
     src: url("../tropical.ttf");
 }
 
+@font-face {
+    font-family: "sephora";
+    src: url("../Sephora & Hayden.ttf");
+}
+
 a {
     cursor: pointer !important;
     -webkit-tap-highlight-color: transparent;

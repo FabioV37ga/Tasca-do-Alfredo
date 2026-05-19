@@ -105,7 +105,10 @@ header {
 @media (min-width: 1300px) {
     header {
         height: 130px;
-        margin-bottom: -1px
+        margin-bottom: -1px;
+        background-position: right;
+        background-position-y: -10px;
+        background-size: 250px;
     }
 
     #header-logo {

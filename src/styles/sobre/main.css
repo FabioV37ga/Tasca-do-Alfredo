@@ -1,7 +1,16 @@
-#sobre-container{
+#sobre-container {
     width: 100%;
     display: flex;
     align-items: self-end;
     flex-direction: column;
 }
 
+main {
+    height: calc(100% - 134px - 60px) !important;
+}
+
+@media (min-width: 1400px) {
+    #sobre-container{
+        height: 100%;
+    }
+}
