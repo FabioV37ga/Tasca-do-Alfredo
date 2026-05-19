@@ -20,7 +20,7 @@ export function updateProgressBar(progress: number) {
     u(".loading-screen-text").text(randomText)
 
     if (progress >= 100) {
-        // loadingScreen.remove()
+        loadingScreen.remove()
     }
 }
 
