@@ -39,7 +39,7 @@ export function initializeLoadingScreen() {
 
         currentTextIndex++
 
-        if (currentTextIndex == 6)
+        if (currentTextIndex == 7)
             clearInterval(loadTextChangeInterval)
     }, 3000);
 }
