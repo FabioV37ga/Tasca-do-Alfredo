@@ -1,8 +1,10 @@
+// Define o formato de cada asset usado no preload
 interface assetList {
-    asset: string;
-    page: string
+    asset: string; // caminho do arquivo de imagem
+    page: string;  // página em que o asset deve ser pré-carregado
 }
 
+// Assets carregados em todas as páginas
 const generalAssets: assetList[] = [
     { asset: '/paper.png', page: 'all' },
     { asset: '/logo-white.png', page: 'all' },
@@ -18,11 +20,13 @@ const generalAssets: assetList[] = [
     { asset: '/picture-sobre.png', page: 'sobre' }
 ]
 
+// Assets adicionais específicos para dispositivos móveis
 const mobileAssets: assetList[] = [
     { asset: '/picture-sobre-2.png', page: 'sobre' },
     { asset: '/picture-sobre-3.png', page: 'sobre' }
 ]
 
+// Assets adicionais específicos para desktop / iPad
 const desktopAssets: assetList[] = [
     { asset: '/fachada2.jpeg', page: 'sobre' },
     { asset: '/desktop-mid-image-sobre.png', page: 'sobre' },
@@ -32,53 +36,86 @@ const desktopAssets: assetList[] = [
     { asset: '/desktop-sobre-lower-icon-3.png', page: 'sobre' }
 ]
 
+// Descobre a página atual a partir da URL
+const currentPage = getCurrentPage()
 
-var currentPage = window.location.href.split('/').slice(-1)[0].split('.')[0]
+// Descobre o tipo de dispositivo a partir da largura da janela
+const deviceType = getDeviceType(window.innerWidth)
 
-currentPage == "" ? currentPage = "home" : null
+function getCurrentPage() {
+    const lastSegment = window.location.href.split('/').slice(-1)[0]
+    const pageName = lastSegment.split('.')[0]
 
-var windowWidth = window.innerWidth
-
-var deviceType: string;
-
-if (windowWidth < 1300) {
-    deviceType = "mobile";
-} else if (windowWidth >= 1300 && windowWidth < 1400) {
-    deviceType = "ipad";
-} else {
-    deviceType = "desktop";
+    // Se não houver nome de página, considera a página inicial "home"
+    return pageName === '' ? 'home' : pageName
 }
 
+function getDeviceType(width: number) {
+    if (width < 1300) {
+        return 'mobile'
+    }
+
+    if (width < 1400) {
+        return 'ipad'
+    }
+
+    return 'desktop'
+}
+
+var assetLength: number = 0;
+
+// Retorna a lista de assets que devem ser carregados agora
+function getAssetsToPreload(page: string, device: string) {
+    let assetsToPreload = generalAssets.filter(asset => asset.page === 'all' || asset.page === page)
+
+    assetLength = assetsToPreload.length
+
+    if (device === 'mobile') {
+        assetsToPreload = assetsToPreload.concat(
+            mobileAssets.filter(asset => asset.page === page)
+        )
+    }
+
+    if (device === 'desktop' || device === 'ipad') {
+        assetsToPreload = assetsToPreload.concat(
+            desktopAssets.filter(asset => asset.page === page)
+        )
+    }
+
+    return assetsToPreload
+}
+
+// Função principal chamada pelo app para pré-carregar imagens
 export async function preload() {
-    console.log("Iniciando preload, página: " + currentPage + ", dispositivo: " + deviceType)
+    console.log(`Iniciando preload, página: ${currentPage}, dispositivo: ${deviceType}`)
 
-    var assetsToPreload = generalAssets.filter(asset => asset.page === 'all' || asset.page === currentPage)
-
-    if (deviceType === 'mobile') {
-        assetsToPreload = assetsToPreload.concat(mobileAssets.filter(asset => asset.page === currentPage))
-    }
-    else if (deviceType === 'desktop' || deviceType === 'ipad') {
-        assetsToPreload = assetsToPreload.concat(desktopAssets.filter(asset => asset.page === currentPage))
-    }
+    const assetsToPreload = getAssetsToPreload(currentPage, deviceType)
 
     await Promise.all(
         assetsToPreload.map(src => {
             return new Promise<void>((resolve) => {
-                const img = new Image();
-                img.src = src.asset;
+                const img = new Image()
+                img.src = src.asset
 
-                // console.log(`Preloading asset: ${src.asset}`);
+                // Resolve a promise tanto em sucesso quanto em erro,
+                // para que o preload não fique pendente indefinidamente.
                 img.onload = () => {
-                    console.log(`Asset loaded: ${src.asset}`);
+                    // console.log(`Asset loaded: ${src.asset}`)
+                    logProgress(assetsToPreload.indexOf(src) + 1, assetLength)
                     resolve()
-                };
+                }
 
                 img.onerror = () => {
-                    console.warn(`Falha ao carregar asset: ${src.asset}`);
+                    console.warn(`Falha ao carregar asset: ${src.asset}`)
                     resolve()
-                };
+                }
             })
         })
     )
-    console.log("Assets carregados.")
+    console.log('Assets carregados.')
+}
+
+function logProgress(loaded: number, total: number) {
+    const percentage = Math.round((loaded / total) * 100)
+    console.log(`Progresso do preload: ${percentage}% (${loaded}/${total})`)
 }
