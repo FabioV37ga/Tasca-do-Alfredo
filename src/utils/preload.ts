@@ -36,7 +36,8 @@ const desktopAssets: assetList[] = [
     { asset: '/mid-image-sobre.png', page: 'sobre' },
     { asset: '/desktop-sobre-lower-icon-1.png', page: 'sobre' },
     { asset: '/desktop-sobre-lower-icon-2.png', page: 'sobre' },
-    { asset: '/desktop-sobre-lower-icon-3.png', page: 'sobre' }
+    { asset: '/desktop-sobre-lower-icon-3.png', page: 'sobre' },
+    { asset: '/texture-sobre.png', page: 'sobre' }
 ]
 
 // Descobre a página atual a partir da URL
