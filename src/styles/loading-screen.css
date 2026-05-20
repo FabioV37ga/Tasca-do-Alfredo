@@ -25,12 +25,16 @@
     /* background: green; */
     width: 100%;
     height: 190px;
+    opacity: 0;
 }
 
 .loading-screen-logo img{
     width: 100%;
     height: 100%;
-    opacity: 0;
+    /* opacity: 0; */
+}
+
+.loading-image-loaded{
     animation: appear 2s ease-in-out forwards;
 }
 
@@ -94,11 +98,12 @@
 
 @media (min-width: 1300px) {
     .loading-screen-content{
-        width: 40%
+        width: 650px;
+        height: 350px;
     }
 
     .loading-screen-logo{
-        height: initial
+        height: 329px;
     }
 
     #loading-text{

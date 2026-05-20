@@ -20,11 +20,24 @@ export function updateProgressBar(progress: number) {
     u(".loading-screen-text").text(randomText)
 
     if (progress >= 100) {
-        loadingScreen.remove()
+        // loadingScreen.remove()
     }
 }
 
 export function initializeLoadingScreen() {
+    var loadingLogoContainer = document.querySelector(".loading-screen-logo")! as HTMLElement
+    var loadingLogo = loadingLogoContainer.children[0] as HTMLElement
+
+    console.log(loadingLogo)
+
+    const img = new Image()
+    img.src = "/badge-logo-white.png"
+
+    img.onload = () => {
+        console.log("hasloaded")
+        loadingLogoContainer.classList.add("loading-image-loaded")
+    }
+
     var currentTextIndex = 0
 
     // Atualiza o texto a cada 3 segundos
@@ -33,7 +46,7 @@ export function initializeLoadingScreen() {
 
         if (u(".loading-screen").length > 0) {
             text.textContent = loadingTexts[currentTextIndex]
-        }else{
+        } else {
             clearInterval(loadTextChangeInterval)
         }
 
