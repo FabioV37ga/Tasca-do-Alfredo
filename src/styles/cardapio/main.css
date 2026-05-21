@@ -136,9 +136,11 @@ main {
 .cardapio-page-content-header {
     width: 100%;
     height: 100px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100px;
 }
 
 #selected-page-title {
@@ -152,14 +154,32 @@ main {
     flex-direction: column;
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
+    padding-right: 14px;
+}
+
+.cardapio-page-foodList::-webkit-scrollbar-track{
+    background: transparent;
+    border-radius: 10px;
+}
+
+.cardapio-page-foodList::-webkit-scrollbar-thumb{
+    background: var(--blue);
+    border-radius: 15px;
+}
+
+.cardapio-page-foodList::-webkit-scrollbar{
+    width: 3px;
 }
 
 .cardapio-page-foodItem {
     width: 100%;
-    height: 57px;
+    height: fit-content;
     display: flex;
     border-bottom: 1px solid #384b5f52;
     position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .foodItem-marker-container {
@@ -193,6 +213,7 @@ main {
     font-size: 10px;
     font-family: 'qs-base';
     line-height: 14px;
+    width: 300px;
 }
 
 .cardapio-page-foodItem span {

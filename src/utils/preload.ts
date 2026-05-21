@@ -1,4 +1,5 @@
 import { updateProgressBar } from "./loadingScreen.js";
+import { getCurrentPage, getDeviceType } from "./windowFunctions.js";
 
 // Define o formato de cada asset usado no preload
 interface assetList {
@@ -46,26 +47,6 @@ const currentPage = getCurrentPage()
 // Descobre o tipo de dispositivo a partir da largura da janela
 const deviceType = getDeviceType(window.innerWidth)
 
-function getCurrentPage() {
-    const lastSegment = window.location.href.split('/').slice(-1)[0]
-    const pageName = lastSegment.split('.')[0]
-
-    // Se não houver nome de página, considera a página inicial "home"
-    return pageName === '' ? 'home' : pageName
-}
-
-function getDeviceType(width: number) {
-    if (width < 1300) {
-        return 'mobile'
-    }
-
-    if (width < 1400) {
-        return 'ipad'
-    }
-
-    return 'desktop'
-}
-
 var assetLength: number = 0;
 var loadedAssets: number = 0;
 
@@ -92,8 +73,8 @@ function getAssetsToPreload(page: string, device: string) {
 }
 
 // Função principal chamada pelo app para pré-carregar imagens
-export async function preload() {
-    const assetsToPreload = getAssetsToPreload(currentPage, deviceType)
+export async function preload(page: string, device: string) {
+    const assetsToPreload = getAssetsToPreload(page, device)
 
     await Promise.all(
         assetsToPreload.map(src => {

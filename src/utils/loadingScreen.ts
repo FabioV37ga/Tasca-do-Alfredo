@@ -26,6 +26,7 @@ export function updateProgressBar(progress: number) {
 
 export function initializeLoadingScreen() {
     var loadingLogoContainer = document.querySelector(".loading-screen-logo")! as HTMLElement
+
     var loadingLogo = loadingLogoContainer.children[0] as HTMLElement
 
     console.log(loadingLogo)
