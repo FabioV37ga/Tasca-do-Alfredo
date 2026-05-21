@@ -1,0 +1,205 @@
+main {
+    height: calc(100% - 109.55px - 82.97px) !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.mobile-cardapio-title-container {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.mobile-cardapio-title {
+    width: var(--paddingMobile);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* background: blue; */
+}
+
+.mobile-cardapio-title-shard {
+    width: 45px;
+    margin-bottom: 5px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cardapio-title {
+    font-family: "quay";
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.cardapio-title::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    bottom: -10px;
+    background: var(--yellow);
+}
+
+#mobile-cardapio-esboco {
+    position: absolute;
+    width: 200px;
+    right: -20px;
+    opacity: .5;
+}
+
+/* Navegaçao do cardápio */
+
+.cardapio-pages-container {
+    width: 100%;
+    height: 110px;
+    background: var(--darkblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardapio-pages {
+    width: var(--mobilePadding);
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cardapio-page {
+    height: 43px;
+    width: 120px;
+    margin-right: 3px;
+    border: 1px solid var(--grayblue);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-family: 'quay';
+    background-color: var(--blue);
+    -webkit-box-shadow: 0px 0px 5px 1px #0000005d;
+    box-shadow: 0px 0px 5px 1px #0000005d;
+}
+
+.cardapio-page:nth-child(4),
+.cardapio-page:nth-child(5) {
+    margin-top: 3px;
+}
+
+.cardapio-page-label {
+    /* background: red; */
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    width: 85px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#selected-page {
+    background: url(../../paper.png) !important;
+    color: var(--blue)
+}
+
+.cardapio-page-content-container {
+    width: 100%;
+    height: calc(100% - 200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardapio-page-content {
+    width: var(--paddingMobile);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.cardapio-page-content-header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#selected-page-title {
+    font-size: 28px !important;
+}
+
+.cardapio-page-foodList {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.cardapio-page-foodItem {
+    width: 100%;
+    height: 57px;
+    display: flex;
+    border-bottom: 1px solid #384b5f52;
+    position: relative;
+}
+
+.foodItem-marker-container {
+    width: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: flex-start;
+}
+
+.foodItem-marker-container img {
+    width: 18px;
+}
+
+.cardapio-page-foodItem h2,
+.cardapio-page-foodItem p {
+    margin: 0;
+    padding: 0;
+    color: var(--blue)
+}
+
+.cardapio-page-foodItem h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'quay';
+    margin-bottom: 5px;
+}
+
+.cardapio-page-foodItem p {
+    font-size: 10px;
+    font-family: 'qs-base';
+    line-height: 14px;
+}
+
+.cardapio-page-foodItem span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: 'qs-base';
+    color: var(--brown);
+    font-size: 13px;
+}

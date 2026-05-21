@@ -5,18 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Início - Tasca do Alfredo</title>
+    <title>Sobre - Tasca do Alfredo</title>
     <link rel="stylesheet" href="styles/document.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/expand-menu.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/footer.css">
 
-    <link rel="stylesheet" href="styles/home/home-middle.css">
-    <link rel="stylesheet" href="styles/home/home-upper.css">
+    <link rel="stylesheet" href="styles/cardapio/main.css">
+
+    <link rel="stylesheet" href="styles/loading-screen.css">
 </head>
 
 <body>
+    <section class="loading-screen">
+        <div class="loading-screen-content">
+            <div class="loading-screen-logo">
+                <img src="badge-logo-white.png" alt="">
+            </div>
+            <div class="loading-screen-progress-container">
+                <div class="loading-screen-progress-bar">
+                    <div class="loading-screen-progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            <div class="loading-screen-text-container">
+                <p id="loading-text">Abrindo as portas...</p>
+            </div>
+        </div>
+    </section>
     <header>
         <div id="header-pattern">
         </div>
@@ -30,9 +46,9 @@
             </div>
             <div id="header-navigation-buttons">
                 <a href="index.html" class="desktop-navigation-button">início</a>
-                <a href="sobre.html" class="desktop-navigation-button">sobre</a>
+                <a class="desktop-navigation-button" id="selected">sobre</a>
                 <a href="contato.html" class="desktop-navigation-button">contato</a>
-                <a class="desktop-navigation-button" id="selected">cardápio</a>
+                <a href="cardapio.html" class="desktop-navigation-button">cardápio</a>
                 <a href="projeto.html" class="navigation-button" id="project-navigation-button">
                     <img src="shard-blue.png" alt="">
                     <span>Projeto</span>
@@ -47,7 +63,7 @@
                     <div id="menu-container">
                         <a id="menu-close">
                             <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
-                             X
+                            X
                         </a>
                         <div class="menu-logo">
                             <img src="badge-white.png" id="menu-logo-badge">
@@ -64,7 +80,7 @@
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <a href="sobre.html">
+                                <a>
                                     <div class="nav-icon-container">
                                         <i class="fa fa-info nav-icon-circle nav-icon" aria-hidden="true"></i>
                                     </div>
@@ -82,7 +98,7 @@
                                 </a>
                             </li>
                             <li class="mobile-nav-item">
-                                <a>
+                                <a href="cardapio.html">
                                     <div class="nav-icon-container">
                                         <i class="fa fa-book nav-icon" aria-hidden="true"></i>
                                     </div>
@@ -97,6 +113,69 @@
         </section>
     </header>
     <main>
+        <section class="mobile-cardapio-title-container">
+            <div class="mobile-cardapio-title">
+                <img src="shard-piece.png" alt="" class="mobile-cardapio-title-shard">
+                <h1 class="cardapio-title">Cardápio</h1>
+                <img src="esboco.png" alt="" id="mobile-cardapio-esboco">
+            </div>
+        </section>
+        <section class="cardapio-pages-container">
+            <ul class="cardapio-pages">
+                <li class="cardapio-page" id="selected-page">
+                    <span class="cardapio-page-label">
+                        Entradas <br> & Petiscos
+                    </span>
+                </li>
+                <li class="cardapio-page">
+                    <span class="cardapio-page-label">
+                        Pratos Principais
+                    </span>
+                </li>
+                <li class="cardapio-page">
+                    <span class="cardapio-page-label">
+                        Sobremesas & Etc.
+                    </span>
+                </li>
+                <li class="cardapio-page">
+                    <span class="cardapio-page-label">
+                        Bebidas
+                    </span>
+                </li>
+                <li class="cardapio-page">
+                    <span class="cardapio-page-label">
+                        Refrescos
+                    </span>
+                </li>
+            </ul>
+        </section>
+        <section class="cardapio-page-content-container">
+            <div class="cardapio-page-content">
+                <div class="cardapio-page-content-header">
+                    <img src="shard-piece.png" alt="" class="mobile-cardapio-title-shard">
+                    <h1 class="cardapio-title" id="selected-page-title">
+                        Entradas & Petiscos
+                    </h1>
+                </div>
+                <ul class="cardapio-page-foodList">
+                    <li class="cardapio-page-foodItem">
+                        <div class="foodItem-marker-container">
+                            <img src="cardapio-marker.png" alt="">
+                        </div>
+                        <div class="foodItem-text-container">
+                            <h2 class="foodItem-title">
+                                Bolinhos de bacalhau
+                            </h2>
+                            <p>
+                                Tradicional receita portuguesa <br>
+                                com bacalhau desfiado e temperos da casa.
+                            </p>
+                            <span>R$ 24,00</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer>
         <section id="footer-container">
@@ -132,4 +211,5 @@
     </footer>
 </body>
 <script type="module" src="app.js"></script>
+
 </html>
