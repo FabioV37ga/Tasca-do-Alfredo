@@ -158,17 +158,17 @@ main {
     padding-right: 14px;
 }
 
-.cardapio-page-foodList::-webkit-scrollbar-track{
+.cardapio-page-foodList::-webkit-scrollbar-track {
     background: transparent;
     border-radius: 10px;
 }
 
-.cardapio-page-foodList::-webkit-scrollbar-thumb{
+.cardapio-page-foodList::-webkit-scrollbar-thumb {
     background: var(--blue);
     border-radius: 15px;
 }
 
-.cardapio-page-foodList::-webkit-scrollbar{
+.cardapio-page-foodList::-webkit-scrollbar {
     width: 3px;
 }
 
@@ -223,4 +223,27 @@ main {
     font-family: 'qs-base';
     color: var(--brown);
     font-size: 13px;
+}
+
+.cardapio-page-section{
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.section-title {
+    color: var(--brown);
+    width: fit-content;
+    position: relative;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.section-title-hbar{
+    height: 1px;
+    margin-top: 3px;
+    width: 100%;
+    background: var(--brown);
+    opacity: .5;
 }

@@ -16,6 +16,7 @@ export function sectionModel(section: secao) {
     return html`
     <li class="cardapio-page-section">
         <div class="section-title">${section.title}</div>
+        <div class="section-title-hbar"></div>
     </li>
     `
 }
