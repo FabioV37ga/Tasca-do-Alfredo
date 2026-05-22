@@ -259,7 +259,12 @@ main {
 @media (min-width: 1300px) {
     main {
         flex-direction: row;
-        background-image: none
+        background-image: none;
+        height: calc(100% - 109.55px - 120.97px) !important
+    }
+    
+    footer{
+        z-index: 10
     }
 
     .mobile-cardapio-title-container {
