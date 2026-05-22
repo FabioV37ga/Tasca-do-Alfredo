@@ -32,6 +32,14 @@ export function appendPageItems(page: string) {
         .forEach(item => {
             container.append(elementModel(item))
         });
+
+    var itemDescription = u(".foodItem-text-container p").nodes
+
+    itemDescription.forEach(element => {
+        if (element.textContent == ''){
+            element.remove()
+        }
+    });
 }
 
 export function changePageTitle(page: string){
