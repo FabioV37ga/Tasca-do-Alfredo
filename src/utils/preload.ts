@@ -73,7 +73,7 @@ function getAssetsToPreload(page: string, device: string) {
         )
     }
 
-    console.log(`Assets a serem pré-carregados: ${assetsToPreload.length} para a página ${page} no dispositivo ${device}`)
+    console.log(`(Pre-Load) \n Total assets: ${assetsToPreload.length} \n Page: ${page} \n Device: ${device}`)
     assetLength = assetsToPreload.length
 
     return assetsToPreload
