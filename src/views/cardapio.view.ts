@@ -13,7 +13,7 @@ export default function changeSelectedCardapioPage(pageIndex: string) {
             element.setAttribute("id", "selected-page")
         }
 
-        console.log("pagina " + pageIndex + " selecionada.")
+        // console.log("pagina " + pageIndex + " selecionada.")
     });
 }
 
@@ -32,5 +32,29 @@ export function appendPageItems(page: string) {
         .forEach(item => {
             container.append(elementModel(item))
         });
+}
 
+export function changePageTitle(page: string){
+    var pageTitleString: string = '';
+    switch (page){
+        case '0':
+            pageTitleString = "Entradas & Petiscos"
+            break;
+        case '1':
+            pageTitleString = "Pratos Principais"
+            break;
+        case '2':
+            pageTitleString = "Sobremesas & etc."
+            break;
+        case '3':
+            pageTitleString = "Bebidas"
+            break;
+        case '4':
+            pageTitleString = "Refrescos"
+            break;
+    }
+
+    var titleElement = u("#selected-page-title").first() as HTMLElement
+
+    titleElement.textContent = pageTitleString
 }

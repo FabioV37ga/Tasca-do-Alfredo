@@ -1,5 +1,5 @@
 import u from "umbrellajs";
-import changeSelectedCardapioPage, { appendPageItems } from "../views/cardapio.view.js";
+import changeSelectedCardapioPage, { appendPageItems, changePageTitle } from "../views/cardapio.view.js";
 
 export class CardapioNavigation {
 
@@ -16,6 +16,7 @@ export class CardapioNavigation {
 
     static setPage(page: string) {
         changeSelectedCardapioPage(page)
+        changePageTitle(page)
         appendPageItems(page)
     }
 }

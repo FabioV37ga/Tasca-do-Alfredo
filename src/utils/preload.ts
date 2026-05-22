@@ -21,7 +21,14 @@ const generalAssets: assetList[] = [
     { asset: '/food-icon-3.png', page: 'home' },
     { asset: '/food-icon-4.png', page: 'home' },
     { asset: '/esboco.png', page: 'sobre' },
-    { asset: '/picture-sobre.png', page: 'sobre' }
+    { asset: '/picture-sobre.png', page: 'sobre' },
+    { asset: '/esboco.png', page: 'cardapio' },
+    { asset: '/cardapio-page-0.png', page: 'cardapio' },
+    { asset: '/cardapio-page-1.png', page: 'cardapio' },
+    { asset: '/cardapio-page-2.png', page: 'cardapio' },
+    { asset: '/cardapio-page-3.png', page: 'cardapio' },
+    { asset: '/cardapio-page-4.png', page: 'cardapio' },
+    { asset: '/cardapio-marker.png', page: 'cardapio' },
 ]
 
 // Assets adicionais específicos para dispositivos móveis
@@ -98,7 +105,7 @@ export async function preload(page: string, device: string) {
             })
         })
     )
-    console.log('Assets carregados.')
+    // console.log('Assets carregados.')
 }
 
 /*

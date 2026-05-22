@@ -29,13 +29,13 @@ export function initializeLoadingScreen() {
 
     var loadingLogo = loadingLogoContainer.children[0] as HTMLElement
 
-    console.log(loadingLogo)
+    // console.log(loadingLogo)
 
     const img = new Image()
     img.src = "/badge-logo-white.png"
 
     img.onload = () => {
-        console.log("hasloaded")
+        // console.log("hasloaded")
         loadingLogoContainer.classList.add("loading-image-loaded")
     }
 

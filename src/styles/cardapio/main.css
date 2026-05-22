@@ -216,6 +216,10 @@ main {
     width: 300px;
 }
 
+.cardapio-page img{
+    width: 32px;
+}
+
 .cardapio-page-foodItem span {
     position: absolute;
     right: 0;
