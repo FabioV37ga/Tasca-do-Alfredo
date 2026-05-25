@@ -1,22 +1,8 @@
-✅1. Reformatar responsividade (versão tablet é referente ao ipad air, e não pro).
-    ✅1.1. Início. (ipad✅ desktop✅)
-    ✅1.2. Sobre. (ipad ✅ desktop✅)
-    ✅1.3. Cardápio. (ipad ✅ desktop✅)
-✅2. Refatorar 'Sobre' de um jeito que facilite responsividade (tablet/desktop).
-✅3. Refatorar Cardápio (ipad/desktop) - aside de um jeito que facilite responsividade. 
-4. Fazer responsividade do footer (ipad/desktop).
-
-5. Desenvolver aba 'Contato'
-6. Desenvolver aba 'Projeto"
-    6.1 Projeto precisa incluir iframe com vizualização do 360º
-    6.2 Projeto precisa incluir imagens e especificações do projeto da tasca
-7. explicar o que diabos é alheira na pagina cardapio
-✅8. cardapio: onchangepage resetar scroll e selecionar 1 item da pagina
-
-
-@extra:
-
-✅1. Adicionar função aos botões da página inicial
-    ✅1. Conhecer a tasca
-    ✅2. Ver cardápio
-✅2. Sobre: Trocar títlo e subtítulo (o atual se refere ao projeto)
+1. Fazer responsividade do footer (ipad/desktop).
+2. Desenvolver aba 'Contato'
+3. Desenvolver aba 'Projeto"
+    3.1 Projeto precisa incluir iframe com vizualização do 360º
+    3.2 Projeto precisa incluir imagens e especificações do projeto da tasca
+4. explicar o que diabos é alheira na pagina cardapio
+5. implementar desktopText em itemCardapio.ts 
+    (texto informativo para itens que não tem texto, para mostrar no display do desktop)
