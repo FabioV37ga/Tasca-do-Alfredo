@@ -7,7 +7,12 @@ const loadingTexts: string[] = [
     "Cortando os ingredientes...",
     "Mexendo a panela...",
     "Adicionando temperos secretos...",
-    "Quase lá..."
+    "Preparando drinks...",
+    "Finalizando os pratos...",
+    "Servindo o Chopp...",
+    "Posicionando cadeiras...",
+    "Ajustando a iluminação...",
+    "Colocando música ambiente...",
 ]
 
 const loadingScreen: HTMLElement = u(".loading-screen").first() as HTMLElement
