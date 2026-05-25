@@ -12,8 +12,6 @@ export default function changeSelectedCardapioPage(pageIndex: string) {
         } else {
             element.setAttribute("id", "selected-page")
         }
-
-        // console.log("pagina " + pageIndex + " selecionada.")
     });
 }
 
@@ -65,4 +63,21 @@ export function changePageTitle(page: string){
     var titleElement = u("#selected-page-title").first() as HTMLElement
 
     titleElement.textContent = pageTitleString
+}
+
+export function changeSelectedItem(item: number, page: number){
+    console.log("Selected item " + item + " of page " + page)
+
+    const imageElement = u(".aside-item-image").first() as HTMLElement
+
+    var imageUrl = `../../pratos/0${page}-${item < 10 ? '0' + item : item}.png`
+    imageElement.style.backgroundImage = `url(${imageUrl})`
+
+    const itemTitleElement = u(".aside-item-title").first() as HTMLElement
+
+    const selectedItem = itensDoCardapio[page][item]
+    itemTitleElement.textContent = selectedItem.title
+
+    const itemDescriptionElement = u(".aside-item-description").first() as HTMLElement
+    itemDescriptionElement.textContent = 'text' in selectedItem ? selectedItem.text : ''
 }

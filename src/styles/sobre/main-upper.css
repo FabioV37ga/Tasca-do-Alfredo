@@ -65,7 +65,7 @@
     width: 140px;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
     #page-welcome {
         width: 210px !important;
     }

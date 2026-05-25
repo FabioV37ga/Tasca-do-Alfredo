@@ -101,7 +101,7 @@
     }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
     .loading-screen-content{
         width: 650px;
         height: 350px;

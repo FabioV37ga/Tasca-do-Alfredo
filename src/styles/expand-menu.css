@@ -111,10 +111,10 @@
 }
 
 #outside-menu {
-    width: 1300px;
+    width: 1000px;
     height: 100%;
     position: absolute;
-    left: -1300px;
+    left: -1000px;
 }
 
 .mobile-nav-item a{

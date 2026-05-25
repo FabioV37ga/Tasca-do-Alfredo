@@ -79,7 +79,7 @@ main {
     border-radius: 40px 0 0 40px;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
     #home-upper {
         height: 465px;
     }

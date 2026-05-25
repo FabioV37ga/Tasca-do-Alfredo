@@ -82,13 +82,13 @@ a:active {
     outline: none
 }
 
-@media(max-width: 1300px) {
+@media(max-width: 1000px) {
     a span {
         transform: translateY(1.5px)
     }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
     body {
         flex-direction: column;
         flex-wrap: nowrap;

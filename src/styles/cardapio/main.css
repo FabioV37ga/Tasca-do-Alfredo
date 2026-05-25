@@ -256,7 +256,7 @@ main {
     display: none
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
     main {
         flex-direction: row;
         background-image: none;

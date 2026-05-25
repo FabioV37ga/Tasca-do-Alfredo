@@ -114,7 +114,7 @@ footer {
     opacity: 8%;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1000px) {
     footer {
         height: 100px;
         position: absolute;
