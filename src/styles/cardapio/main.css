@@ -133,6 +133,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
 }
 
 .cardapio-page-content-header {
@@ -259,6 +260,12 @@ main {
     display: none
 }
 
+@media (min-width: 1300px) {
+    .aside-item-description {
+        height: 37% !important
+    }
+}
+
 @media (min-width: 1000px) {
     main {
         flex-direction: row;
@@ -315,7 +322,6 @@ main {
         z-index: 2;
         background-image: url("../../paper.png");
         height: 100%;
-        position: relative;
     }
 
     .cardapio-page span {
@@ -389,11 +395,14 @@ main {
 
     .desktop-aside-content {
         width: 80%;
-        height: calc(100% - 40px);
+        height: calc(100% - 80px);
         border: 3px solid #B27C2F;
         border-radius: 10px;
         padding: 10px 25px;
         corner-shape: bevel;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         /* background: blue */
     }
 
@@ -413,24 +422,33 @@ main {
     .aside-item-title {
         font-family: 'quay';
         color: var(--blue);
-        font-size: 30px;
+        font-size: 26px;
         text-transform: uppercase;
         margin-top: 25px;
         text-align: center;
     }
 
     .aside-item-description {
-        padding: 26px 20px;
-        border-right: 3px dotted black;
-        border-left: 3px dotted black;
-        border-bottom: 3px dotted black;
-        border-radius: 15px;
+
+        padding: 0 20px;
+        border-top: 1px solid transparent;
+        border-right: 3px dotted var(--blue);
+        border-left: 3px dotted var(--blue);
+        border-bottom: 3px dotted var(--blue);
+        text-align: center;
+        display: flex;
+        width: calc(100% - 40px - 6px);
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
         height: 135px;
         font-family: 'qs-base';
         color: var(--blue);
-        font-size: 18px;
+        font-size: 15px;
         margin-top: 30px;
         position: relative;
+        height: 32%;
+        corner-shape: bevel;
     }
 
     .aside-item-description::before {
@@ -443,5 +461,20 @@ main {
         top: -7px;
         left: 0;
         text-align: center
+    }
+}
+
+@media (min-width: 1400px) {
+    .desktop-aside-content {
+        width: 70%;
+        height: 80%
+    }
+
+    .aside-item-description {
+        border-right: 5px dotted var(--blue);
+        border-left: 5px dotted var(--blue);
+        border-bottom: 5px dotted var(--blue);
+        width: calc(100% - 40px - 10px);
+        font-size: 18px
     }
 }
