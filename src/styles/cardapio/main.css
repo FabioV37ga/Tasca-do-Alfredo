@@ -262,8 +262,8 @@ main {
         background-image: none;
         height: calc(100% - 109.55px - 120.97px) !important
     }
-    
-    footer{
+
+    footer {
         z-index: 10
     }
 
@@ -373,12 +373,77 @@ main {
     }
 
     .desktop-aside {
-        display: initial;
-        width: 37%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
         height: 100%;
-        background: red;
+        /* background: red; */
+        background: url(../../desktop-cardapio-aside-border.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         position: absolute;
-        right: -20px;
-        z-index: -1;
+        right: 0px;
+        z-index: 1;
     }
+
+    .desktop-aside-content {
+        width: calc(100% - 90px);
+        height: calc(100% - 40px);
+        /* background: blue */
+    }
+
+    .aside-item-image {
+        /* background: red; */
+        border: 2px solid #B27C2F;
+        background: url(../../pratos/00-00.png);
+        background-size: cover;
+        width: calc(100% - 4px);
+        height: 391px;
+        margin-top: 18px;
+        border-radius: 10px;
+        corner-shape: bevel;
+    }
+
+    .aside-item-title {
+        font-family: 'quay';
+        color: var(--blue);
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-top: 37px;
+        text-align: center;
+    }
+
+    .aside-item-description {
+        padding: 26px 20px;
+        border-right: 3px dotted black;
+        border-left: 3px dotted black;
+        border-bottom: 3px dotted black;
+        border-radius: 15px;
+        height: 135px;
+        font-family: 'qs-base';
+        color: var(--blue);
+        font-size: 18px;
+        position: relative;
+    }
+
+    .aside-item-description::before {
+        font-size: 15px;
+        content: 'DESCRIÇÃO DO PRATO';
+        color: var(--blue);
+        font-family: "qs-base";
+        position: absolute;
+        top: -7px;
+    }
+
+    .aside-item-description::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 9px;
+        border-bottom: 3px dotted black;
+        width: 90px;
+    }
+
 }
