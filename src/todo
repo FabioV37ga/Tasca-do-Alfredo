@@ -1,8 +1,8 @@
 1. Reformatar responsividade (versão tablet é referente ao ipad air, e não pro).
-    1.1. Início.
-    1.2. Sobre.
+    ✅1.1. Início. (ipad✅ desktop✅)
+    ✅1.2. Sobre. (ipad ✅ desktop✅)
     1.3. Cardápio.
-2. Refatorar 'Sobre' de um jeito que facilite responsividade (tablet/desktop).
+✅2. Refatorar 'Sobre' de um jeito que facilite responsividade (tablet/desktop).
 3. Refatorar Cardápio (ipad/desktop) - aside de um jeito que facilite responsividade. 
 4. Fazer responsividade do footer (ipad/desktop).
 
@@ -14,8 +14,8 @@
 
 @extra:
 
-1. Adicionar função aos botões da página inicial
-    1. Conhecer a tasca
-    2. Ver cardápio
-2. Sobre: Trocar títlo e subtítulo (o atual se refere ao projeto)
+✅1. Adicionar função aos botões da página inicial
+    ✅1. Conhecer a tasca
+    ✅2. Ver cardápio
+✅2. Sobre: Trocar títlo e subtítulo (o atual se refere ao projeto)
 3. Refatorar imagens: precisam ser 3x4 (principalmente sobremesas 😥), terminar de gerar.

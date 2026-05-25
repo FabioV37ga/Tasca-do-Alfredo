@@ -4,6 +4,7 @@
     }
 }
 
+
 #desktop-sobre-pictures {
     margin-right: -1px;
     display: flex;
@@ -19,7 +20,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../../fachada2.jpeg);
-    background-position-y: -180px;
+    /* background-position-y: -130px; */
+    background-position-y: bottom;
 }
 
 .desktop-sobre-pictures-mid {
@@ -36,17 +38,6 @@
     display: flex;
 }
 
-.overlapping-image {
-    position: absolute;
-    height: 123%;
-    width: 40%;
-    background: url(../../picture-sobre.png);
-    bottom: -25px;
-    left: -76px;
-    background-size: contain;
-    background-position-x: 17px;
-    background-repeat: no-repeat;
-}
 
 .phrase-container {
     width: 33.3%;
@@ -77,7 +68,7 @@
 }
 
 .phrase-icon char {
-    font-size: 180px;
+    font-size: 150px;
     /* background: red; */
     height: 60px;
     position: absolute;
@@ -92,18 +83,16 @@
     align-items: center;
     font-family: 'qs-base';
     color: white;
-    font-size: 20px;
+    font-size: 15px;
 }
-
-
-
 
 .mid-picture {
     width: 39.3%;
     height: 100%;
     background-image: url(../../desktop-mid-image-sobre.png);
-    background-size: 115%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .bottom-info-container {
@@ -121,7 +110,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: -10px;
 }
 
 .bottom-info-top h1 {
@@ -129,7 +117,7 @@
     padding: 0;
     font-family: 'tropical';
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 15px;
     color: var(--green);
     margin-bottom: 15px;
     position: relative;
@@ -169,6 +157,7 @@
     width: 80%;
     padding: 0;
     margin: 0;
+    font-size: 11px;
     font-family: 'qs-base';
     color: var(--green)
 }
@@ -179,6 +168,43 @@
     background: url(../../mid-image-sobre.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: -47px;
+    background-position: center;
 }
 
+.overlapping-image {
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.overlapping-image img {
+    position: absolute;
+    width: 110% !important;
+    left: -10px;
+    object-fit: cover;
+    height: auto;
+    margin-top: -9px;
+}
+
+@media (min-width: 1400px) {
+    .sobre-upper-right {
+        width: 45%;
+        max-width: 940px !important;
+        height: 100%;
+    }
+
+    .desktop-sobre-pictures-upper {
+        height: 48%;
+    }
+
+    .desktop-sobre-pictures-mid {
+        height: 26%;
+    }
+
+    .desktop-sobre-pictures-lower {
+        height: 26%;
+    }
+
+    .overlapping-image img{
+        left: -18px;
+    }
+}

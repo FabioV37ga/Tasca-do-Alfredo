@@ -79,45 +79,48 @@ main {
     border-radius: 40px 0 0 40px;
 }
 
+/* Tablet (ipad air)*/
 @media (min-width: 1000px) {
     #home-upper {
-        height: 465px;
+        height: 335px;
     }
 
     #home-upper-left {
-        width: 37%;
+        width: 40%;
     }
 
     .home-title {
-        width: 450px
+        width: 350px;
+        font-size: 50px !important;
     }
 
     .home-title-text {
         width: 420px;
-        font-size: 22px;
-        margin: 30px 0 30px 0
+        font-size: 17px;
+        margin: 20px 0 20px 0
     }
 
     #home-meet_project-button {
         margin-top: 20px;
-        width: 260px;
-        height: 50px;
+        width: 230px;
+        height: 43px;
         display: flex;
         justify-content: space-around;
     }
 
     #home-meet_project-button span {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     #home-meet_project-button img {
-        width: 30px;
+        width: 26px;
     }
 }
 
 
 @media (min-width:1400px) and (min-height: 900px) {
     #home-upper {
-        margin-left: -134px
+        margin-left: -88px;
+        zoom: 150%;
     }
 }

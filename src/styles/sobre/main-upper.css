@@ -66,15 +66,27 @@
 }
 
 @media (min-width: 1000px) {
+    .sobre-upper{
+        height: calc(100% - 55px);
+    }
+
+    .page-title.sobre-title {
+        font-size: 45px;
+    }
+
     #page-welcome {
         width: 210px !important;
     }
 
+    .page-subtitle {
+        font-size: 19px;
+    }
+
     .sobre-title-text {
-        font-size: 17px;
-        line-height: 25px;
-        margin-bottom: -5px;
-        width: 90%
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: -15px;
+        width: 95%;
     }
 
     .sobre-upper-left {
@@ -86,8 +98,10 @@
     }
 
     .sobre-upper-right {
-        width: 55%;
-        height: 795px;
+        width: 50%;
+        max-width: 522px !important;
+        /* height: calc(100% - 100px - 130px); */
+        height: calc(100% + 20px);
         max-width: none;
         background-color: gainsboro;
         margin-top: -20px;
@@ -98,47 +112,62 @@
     }
 
     #text-footer-image {
-        width: 380px;
-        margin-top: -50px;
+        width: 250px;
+        margin-top: -20px;
         opacity: 55%;
     }
 }
 
 @media (min-width: 1400px) {
-    .page-title {
+    .page-title.sobre-title {
         font-size: 72px;
+        width: 900px
     }
 
     .sobre-upper {
+        width: calc(100% - 150px);
         height: 100%;
-        justify-content: flex-end;
+        justify-content: space-between;
+    }
+
+    .sobre-subtitle {
+        font-size: 30px;
     }
 
     .sobre-title-text {
-        font-size: 28px !important;
-        line-height: 36px !important;
+        font-size: 25px !important;
+        line-height: 45px !important;
+        margin-bottom: 15px
     }
 
     .sobre-upper-left {
-        width: calc(45% - 130px);
+        width: calc(55%)
     }
 
     .sobre-upper-right {
         height: calc(100% - 35px);
+        min-width: 752px;
     }
 
     .desktop-sobre-pictures-upper {
         background-position-y: -275px;
     }
 
-    .overlapping-image {
-        bottom: -40px !important;
-        left: -30px !important;
-        width: 52% !important;
-        height: 137% !important;
+    .bottom-picture {
+        background-position-x: center !important;
     }
 
-    .bottom-picture{
-        background-position-x: center !important;
+    .bottom-info-top{
+        height: 20% !important;
+    }
+
+    .desktop-info-card p {
+        font-size: 17px !important;
+        /* background: white; */
+        width: 150px !important;
+    }
+
+    .phrase-content p{
+        font-size: 20px !important;
     }
 }

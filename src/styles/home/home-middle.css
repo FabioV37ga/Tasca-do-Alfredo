@@ -159,7 +159,7 @@
     }
 
     .desktop-horizontal-bar {
-        height: 120px;
+        height: 100px;
         width: 100%;
         position: absolute;
         background: var(--blue);
@@ -177,8 +177,8 @@
 
     .desktop-horizontal-bar-pattern {
         position: absolute;
-        right: 2px;
-        width: 400px;
+        right: 3px;
+        width: 360px;
         height: 100%;
         background-image: url(../../azulejo.png);
         background-size: 442px;
@@ -190,7 +190,7 @@
 
     .desktop-horizontal-bar-items {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         height: 100%;
         width: 950px;
         /* background: orange; */
@@ -198,16 +198,22 @@
     }
 
     .hbar-item {
-        width: 310px;
+        width: 260px;
         /* background: blueviolet; */
-        height: 120px;
+        height: 100%;
         display: flex;
         position: relative;
+        margin-right: 15px;
+        margin-left: 15px;
 
     }
 
+    .hbar-item:first-child{
+        margin-left: 0px !important;
+    }
+
     .hbar-item img {
-        width: 90px;
+        width: 70px;
         object-fit: contain;
         height: auto;
         margin-right: 5px;
@@ -220,8 +226,8 @@
         width: 2px;
         height: 70px;
         background: white;
-        left: 0;
-        top: 25px;
+        left: -5px;
+        top: 15px;
     }
 
     #hbar-middle-item::after {
@@ -230,8 +236,8 @@
         width: 2px;
         height: 70px;
         background: white;
-        right: 0;
-        top: 25px;
+        right: -5px;
+        top: 15px;
     }
 
 
@@ -250,7 +256,7 @@
 
     .hbar-item-text h1 {
         font-family: "qs-strong";
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 10px;
     }
 
@@ -266,7 +272,7 @@
     }
 
     #home-middle-container {
-        margin-top: 130px;
+        margin-top: 110px;
         flex-direction: row;
         justify-content: flex-start;
         align-items: normal;
@@ -292,17 +298,18 @@
     }
 
     #home-middle-left-content h1 {
-        font-size: 23px;
+        font-size: 20px;
         width: 300px;
     }
 
     #home-middle-left-content p {
-        font-size: 20px;
+        font-size: 17px;
         width: 390px;
     }
 
     #home-middle-left-content a {
-        font-size: 20px;
+        font-size: 15px;
+        margin-top: 5px;
     }
 
     #home-middle-right {
@@ -314,16 +321,17 @@
     #mobile-food-icons {
         justify-content: space-between;
         margin: 0;
-
+        height: 100%;
+        width: 90%;
     }
 
     .food-icon {
-        width: 180px;
+        width: 125px;
         font-size: 17px;
     }
 
     .food-icon img {
-        width: 180px !important
+        width: 100% !important
     }
 
 }
@@ -334,7 +342,7 @@
     }
 
     #home-middle-right {
-        zoom: 134%
+        zoom: 150%
     }
 
     #home-middle-container {

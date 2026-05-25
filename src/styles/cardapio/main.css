@@ -93,6 +93,8 @@ main {
     background-color: var(--blue);
     -webkit-box-shadow: 0px 0px 5px 1px #0000005d;
     box-shadow: 0px 0px 5px 1px #0000005d;
+    cursor: pointer;
+    user-select: none;
 }
 
 .cardapio-page:nth-child(4),
@@ -180,6 +182,7 @@ main {
     position: relative;
     margin-bottom: 10px;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 .foodItem-marker-container {
@@ -354,7 +357,7 @@ main {
         flex-flow: column;
         width: 60%;
         padding-right: 25px;
-        height: 680px;
+        height: calc(100% - 110px);
     }
 
     .cardapio-page-section {
@@ -379,28 +382,29 @@ main {
         width: 35%;
         height: 100%;
         /* background: red; */
-        background: url(../../desktop-cardapio-aside-border.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
         position: absolute;
         right: 0px;
         z-index: 1;
     }
 
     .desktop-aside-content {
-        width: calc(100% - 90px);
+        width: 80%;
         height: calc(100% - 40px);
+        border: 3px solid #B27C2F;
+        border-radius: 10px;
+        padding: 10px 25px;
+        corner-shape: bevel;
         /* background: blue */
     }
 
     .aside-item-image {
         /* background: red; */
-        border: 2px solid #B27C2F;
+        border: 3px solid #B27C2F;
         background: url(../../pratos/00-00.png);
         background-size: cover;
-        width: calc(100% - 4px);
-        height: 391px;
+        background-position: center center;
+        width: calc(100% - 6px);
+        height: 40%;
         margin-top: 18px;
         border-radius: 10px;
         corner-shape: bevel;
@@ -411,7 +415,7 @@ main {
         color: var(--blue);
         font-size: 30px;
         text-transform: uppercase;
-        margin-top: 37px;
+        margin-top: 25px;
         text-align: center;
     }
 
@@ -425,6 +429,7 @@ main {
         font-family: 'qs-base';
         color: var(--blue);
         font-size: 18px;
+        margin-top: 30px;
         position: relative;
     }
 
@@ -434,16 +439,9 @@ main {
         color: var(--blue);
         font-family: "qs-base";
         position: absolute;
+        width: 100%;
         top: -7px;
+        left: 0;
+        text-align: center
     }
-
-    .aside-item-description::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 9px;
-        border-bottom: 3px dotted black;
-        width: 90px;
-    }
-
 }
