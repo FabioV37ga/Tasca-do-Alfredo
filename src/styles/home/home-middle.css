@@ -177,7 +177,7 @@
 
     .desktop-horizontal-bar-pattern {
         position: absolute;
-        right: 3px;
+        right: 0px;
         width: 360px;
         height: 100%;
         background-image: url(../../azulejo.png);
@@ -185,7 +185,8 @@
     }
 
     .desktop-horizontal-bar-pattern img {
-        height: 100%
+        height: 100%;
+        margin-left: -2px;
     }
 
     .desktop-horizontal-bar-items {
@@ -208,7 +209,7 @@
 
     }
 
-    .hbar-item:first-child{
+    .hbar-item:first-child {
         margin-left: 0px !important;
     }
 

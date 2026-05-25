@@ -29,8 +29,6 @@ export function initializeLoadingScreen() {
 
     var loadingLogo = loadingLogoContainer.children[0] as HTMLElement
 
-    // console.log(loadingLogo)
-
     const img = new Image()
     img.src = "/badge-logo-white.png"
 
@@ -54,6 +52,7 @@ export function initializeLoadingScreen() {
         currentTextIndex++
 
         if (currentTextIndex == 7)
-            clearInterval(loadTextChangeInterval)
+            currentTextIndex = 0
+
     }, 3000);
 }

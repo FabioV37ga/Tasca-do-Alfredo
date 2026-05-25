@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Início - Tasca do Alfredo</title>
+    <title>Projeto - Tasca do Alfredo</title>
     <link rel="stylesheet" href="styles/document.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/expand-menu.css">
@@ -17,6 +17,21 @@
 </head>
 
 <body>
+    <section class="loading-screen">
+        <div class="loading-screen-content">
+            <div class="loading-screen-logo">
+                <img src="badge-logo-white.png" alt="">
+            </div>
+            <div class="loading-screen-progress-container">
+                <div class="loading-screen-progress-bar">
+                    <div class="loading-screen-progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            <div class="loading-screen-text-container">
+                <p id="loading-text">Abrindo as portas...</p>
+            </div>
+        </div>
+    </section>
     <header>
         <div id="header-pattern">
         </div>
@@ -47,7 +62,7 @@
                     <div id="menu-container">
                         <a id="menu-close">
                             <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
-                             X
+                            X
                         </a>
                         <div class="menu-logo">
                             <img src="badge-white.png" id="menu-logo-badge">
@@ -132,4 +147,5 @@
     </footer>
 </body>
 <script type="module" src="app.js"></script>
+
 </html>

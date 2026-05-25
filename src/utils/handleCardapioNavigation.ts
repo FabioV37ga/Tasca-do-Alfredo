@@ -10,6 +10,9 @@ export class CardapioNavigation {
             u(element).on("click", () => {
                 // changeSelectedCardapioPage(element.getAttribute('value') as string)
                 CardapioNavigation.setPage(element.getAttribute('value') as string)
+                CardapioNavigation.selectItem(element, parseInt(element.getAttribute('value') as string))
+                var foodlist = u('.cardapio-page-foodList').first() as HTMLElement
+                foodlist.scrollTo(0, 0)
             })
         });
     }
