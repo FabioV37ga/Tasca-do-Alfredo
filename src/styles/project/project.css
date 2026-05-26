@@ -3,6 +3,7 @@ main {
     background: none
 }
 
+
 .project-container {
     height: 100%;
     width: 100%;
@@ -13,83 +14,40 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .project-container>* {
-    position: relative;
     z-index: 2;
 }
 
-.project-container::before {
+.background {
     content: '';
     position: absolute;
-    top: 110px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 110px);
-    background: rgba(0, 0, 0, 0.856);
-    z-index: 1;
+    height: calc(100%);
+    /* background: rgba(0, 0, 0, 0.8); */
+    background: black;
+    opacity: 0.8;
+    z-index: 1 !important;
 }
 
 header {
     height: 110px !important;
+    filter: contrast(2) saturate(-0) !important;
 }
 
 body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    background: black
 }
 
-.project-welcome {
-    /* background: red; */
-    width: 300px;
-    height: 150px;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-}
-
-#project-welcome-logo {
-    width: 100%;
-}
-
-.project-welcome h1 {
-    color: white;
-    font-family: 'tropical';
-    font-size: 20px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.project-welcome p {
-    color: white;
-    font-family: 'qs-base';
-    font-size: 14px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.project-start-button-container {
-    /* background: green; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-#project-start-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--blue);
-    font-size: 20px;
-    cursor: pointer;
+@media (min-width: 1000px){
+    header{
+        height: 130px !important; 
+    }
 }
