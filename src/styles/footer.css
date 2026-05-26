@@ -120,4 +120,68 @@ footer {
         position: absolute;
         bottom: 0;
     }
+    #footer-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #footer-logo{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: 100%;
+    }
+
+    #footer-logo::before{
+        display: none;
+    }
+
+    #footer-logo-badge{
+        width: 45px
+    }
+
+    #footer-logo-image{
+        width: 115px;
+    }
+
+    #footer-info{
+        margin-top: 0px;
+        height: 50px;
+        width: calc(100% - 200px);
+        display: flex;
+        align-items: center;
+    }
+
+    #footer-info > *{
+        height: 50%;
+        margin: 0;
+    }
+
+    #footer-info-text h3, #footer-info-contact h3 {
+        font-size: 13px;
+        height: 19px
+    }
+
+    #footer-info-text{
+        height: 38px;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #footer-info-contact{
+        height: 38px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #footer-links{
+        height: 19px
+    }
+    #footer-info-contact a {
+        padding: 11px 5px
+    }
 }

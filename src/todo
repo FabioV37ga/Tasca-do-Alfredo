@@ -1,8 +1,12 @@
-1. Fazer responsividade do footer (ipad/desktop).
-2. Desenvolver aba 'Contato'
-3. Desenvolver aba 'Projeto"
+🔴 2. Desenvolver aba 'Contato'
+
+🟡 3. Desenvolver aba 'Projeto"
     3.1 Projeto precisa incluir iframe com vizualização do 360º
     3.2 Projeto precisa incluir imagens e especificações do projeto da tasca
-4. explicar o que diabos é alheira na pagina cardapio
-5. implementar desktopText em itemCardapio.ts 
+
+🔴 4. explicar o que diabos é alheira na pagina cardapio
+
+🔴 5. implementar desktopText em itemCardapio.ts 
     (texto informativo para itens que não tem texto, para mostrar no display do desktop)
+
+🔴 6. (ipad/desktop) Implementar seletor visual para itens selecionados no cardápio em display.

@@ -5,7 +5,7 @@
     background-color: var(--blue);
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 10;
     display: none;
     -webkit-box-shadow: -3px 0px 28px 5px #000000;
     box-shadow: -3px 0px 28px 5px #000000;

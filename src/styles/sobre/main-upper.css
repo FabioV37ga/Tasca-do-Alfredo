@@ -71,7 +71,7 @@
     }
 
     .page-title.sobre-title {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     #page-welcome {
@@ -83,7 +83,7 @@
     }
 
     .sobre-title-text {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 21px;
         margin-bottom: -15px;
         width: 95%;
@@ -113,7 +113,7 @@
 
     #text-footer-image {
         width: 250px;
-        margin-top: -20px;
+        margin-top: -10px;
         opacity: 55%;
     }
 }

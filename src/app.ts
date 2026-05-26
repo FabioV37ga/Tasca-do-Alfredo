@@ -1,9 +1,8 @@
-import { addMenuListeners} from "./utils/handleMobileMenu.js";
+import { addMenuListeners } from "./utils/handleMobileMenu.js";
 import { preload } from "./utils/preload.js";
 import { initializeLoadingScreen } from "./utils/loadingScreen.js";
 import { getCurrentPage, getDeviceType } from "./utils/windowFunctions.js";
 import { CardapioNavigation } from "./utils/handleCardapioNavigation.js";
-
 
 // Inicializa a tela de carregamento
 initializeLoadingScreen()
@@ -11,11 +10,15 @@ initializeLoadingScreen()
 // Adiciona os listeners para o menu mobile
 addMenuListeners()
 
-// Pré-carrega as imagens necessárias para a página atual e tipo de dispositivo
-await preload(getCurrentPage(), getDeviceType(window.innerWidth))
+// Obtém a página atual e o tipo de dispositivo para pré-carregar os recursos necessários
+const currentPage = getCurrentPage()
+const deviceType = getDeviceType(window.innerWidth)
 
-if (getCurrentPage() == 'cardapio'){
-    CardapioNavigation.addNavigationHandlers()
-    CardapioNavigation.setPage('0')
-}
+// Pré-carrega as imagens necessárias para a página atual e tipo de dispositivo
+await preload(currentPage, deviceType)
+
+
+// Métodos de inicialização específicos para cada página
+currentPage == 'cardapio' ? CardapioNavigation.initialize() : null
+
 

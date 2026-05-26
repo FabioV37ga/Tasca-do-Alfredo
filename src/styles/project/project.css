@@ -1,0 +1,95 @@
+main {
+    height: calc(100% - 110px) !important;
+    background: none
+}
+
+.project-container {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../interior-noite.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-container>* {
+    position: relative;
+    z-index: 2;
+}
+
+.project-container::before {
+    content: '';
+    position: absolute;
+    top: 110px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 110px);
+    background: rgba(0, 0, 0, 0.856);
+    z-index: 1;
+}
+
+header {
+    height: 110px !important;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.project-welcome {
+    /* background: red; */
+    width: 300px;
+    height: 150px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#project-welcome-logo {
+    width: 100%;
+}
+
+.project-welcome h1 {
+    color: white;
+    font-family: 'tropical';
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.project-welcome p {
+    color: white;
+    font-family: 'qs-base';
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.project-start-button-container {
+    /* background: green; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#project-start-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+    font-size: 20px;
+    cursor: pointer;
+}

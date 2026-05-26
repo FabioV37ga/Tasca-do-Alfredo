@@ -1,13 +1,13 @@
 export function getCurrentPage() {
     const lastSegment = window.location.href.split('/').slice(-1)[0]
-    const pageName = lastSegment.split('.')[0]
+    const pageName = lastSegment.split('.')[0].split('?')[0]
 
     // Se não houver nome de página, considera a página inicial "home"
     return pageName === '' ? 'home' : pageName
 }
 
 export function getDeviceType(width: number) {
-    if (width < 1300) {
+    if (width < 1000) {
         return 'mobile'
     }
 
