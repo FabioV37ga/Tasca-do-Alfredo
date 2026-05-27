@@ -10,11 +10,8 @@ export default class ProjectController {
 
     static initialize() {
         console.log("project initialized")
-        const projectStartButton = u('#project-start-button').first() as HTMLElement
 
-        u(projectStartButton).on('click', () => {
-            ProjectController.navigate('forwards')
-        })
+        ProjectController.addUserInteractions()
     }
 
     static async navigate(direction: string) {
@@ -26,10 +23,15 @@ export default class ProjectController {
 
             await ProjectController.renderPage()
 
-
+            console.log("navegou para " + ProjectController.currentPage)
         }
         else if (direction == 'backwards') {
+            await ProjectController.hidePage()
+
             ProjectController.currentPage - 1 < 0 ? null : ProjectController.currentPage--
+
+            await ProjectController.renderPage()
+            console.log("navegou para " + ProjectController.currentPage)
         }
     }
 
@@ -38,8 +40,8 @@ export default class ProjectController {
             case 0:
 
                 var elements = document.querySelectorAll('.project-welcome-logo > *, #project-start-button') as NodeListOf<HTMLElement>
-                
-                
+
+
                 for (const element of elements) {
                     console.log(element)
                     await Animation.animateAndWait(welcome.fadeOut, element, 50)
@@ -53,25 +55,47 @@ export default class ProjectController {
         const container = u('.project-container > *').nodes as HTMLElement[]
 
         for (const child of container) {
-            if (
-                child.classList.contains('navigation-button') ||
-                child.classList.contains('background')
-
-            ) continue
+            if (child.classList.contains('background'))
+                continue
 
             child.remove()
         }
     }
 
     static async renderPage() {
+        console.log("renderizando página " + ProjectController.currentPage)
         var container = u('.project-container').first() as HTMLElement
 
-        switch (ProjectController.currentPage) {
-            case 1:
-                break;
+        container.append(projectPages[ProjectController.currentPage]())
+
+        console.log("adicionando interações da página " + ProjectController.currentPage)
+        ProjectController.addUserInteractions()
+
+    }
+
+    static addUserInteractions() {
+        if (ProjectController.currentPage == 0) {
+            const projectStartButton = u('#project-start-button').first() as HTMLElement
+
+            u(projectStartButton).on('click', () => {
+                ProjectController.navigate('forwards')
+            })
         }
 
-        container.append(projectPages[ProjectController.currentPage]())
+        else if (ProjectController.currentPage > 0 && ProjectController.currentPage < 4) {
+            const navigateBackwardsButton = u('#project-navigation-backwards').first() as HTMLElement
+
+            u(navigateBackwardsButton).on('click', () => {
+                ProjectController.navigate('backwards')
+            })
+
+            const navigateForwardsButton = u('#project-navigation-forwards').first() as HTMLElement
+
+            u(navigateForwardsButton).on('click', () => {
+                console.log("clicou para avançar")
+                ProjectController.navigate('forwards')
+            })
+        }
 
     }
 }
