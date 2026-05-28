@@ -95,6 +95,7 @@ class Animation {
         target?: HTMLElement,
         delay?: number
     ) {
+        // console.log(target)
         animationObject.animation(target, delay)
     }
 }

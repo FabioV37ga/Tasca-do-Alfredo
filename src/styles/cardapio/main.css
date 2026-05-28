@@ -292,6 +292,7 @@ main {
         flex-direction: column;
         justify-content: flex-start;
         width: 200px;
+        height: 86%
     }
 
     .cardapio-page {

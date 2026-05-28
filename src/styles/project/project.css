@@ -1,6 +1,8 @@
 main {
     height: calc(100% - 110px) !important;
-    background: none
+    background: none;
+    min-height: 0 !important;
+    overflow-y: hidden;
 }
 
 
@@ -36,7 +38,7 @@ main {
 
 iframe{
     z-index: 1 !important;
-    margin-top: -37px;
+    margin-top: -33px;
 }
 
 header {
