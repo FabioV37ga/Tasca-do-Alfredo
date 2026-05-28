@@ -88,9 +88,9 @@ function strategyItem(strategy: strategy) {
 
 export const projectPages: Array<() => HTMLElement> = [
     projectStart,
-    () => project360('https://kuula.co/share/LvzfY?logo=1&info=1&fs=0&vr=0&autorotate=0.1&thumbs=1', 'Salão Interno'),
-    () => project360('https://kuula.co/share/LvzfM?logo=1&info=1&fs=0&vr=0&autorotate=0.1&thumbs=1', 'Salão Externo'),
-    () => project360('https://kuula.co/share/Lvzfd?logo=1&info=1&fs=0&vr=0&autorotate=0.1&thumbs=1', 'Banheiros'),
+    () => project360('https://kuula.co/share/LvzfY?logo=1&info=1&fs=0&vr=0&autorotate=0.63&thumbs=1', 'Salão Interno'),
+    () => project360('https://kuula.co/share/LvzfM?logo=1&info=1&fs=0&vr=0&autorotate=0.63&thumbs=1', 'Salão Externo'),
+    () => project360('https://kuula.co/share/Lvzfd?logo=1&info=1&fs=0&vr=0&autorotate=0.63&thumbs=1', 'Banheiros'),
     strategies,
 ]
 
