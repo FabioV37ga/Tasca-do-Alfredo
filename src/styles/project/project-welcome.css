@@ -50,3 +50,32 @@
     font-size: 20px;
     cursor: pointer;
 }
+
+@media (min-width: 1000px) {
+    .project-welcome {
+        width: 405px;
+        height: 300px;
+        margin-top: calc(50% - 450px)
+    }
+
+    #project-welcome-title {
+        font-size: 26px;
+    }
+
+    #project-welcome-subtitle {
+        font-size: 18px
+    }
+
+    #project-start-button {
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        font-size: 27px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .project-welcome {
+        margin-top: calc(25% - 250px)
+    }
+}

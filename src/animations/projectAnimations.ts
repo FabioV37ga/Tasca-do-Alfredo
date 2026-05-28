@@ -33,7 +33,7 @@ const darken: AnimationObject = {
         darken.isPlaying = true;
         return animate(element, {
             opacity: [0.8, 1],
-            duration: 2500,
+            duration: 1000,
             delay: delay,
             easing: 'linear',
             onComplete: () => {

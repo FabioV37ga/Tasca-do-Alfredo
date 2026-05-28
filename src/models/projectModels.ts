@@ -17,6 +17,16 @@ export function projectStart() {
     `
 }
 
+var iframeHeight = () => {
+    if (window.innerWidth < 1000) {
+        return `${window.innerHeight - 69}px`;
+    }else if (window.innerWidth >= 1400) {
+        return '100%';
+    }else{
+        return `${window.innerHeight - 80 - 76}px`;
+    }
+}
+
 function project360(source: string, title: string) {
     return html`
    <div class="project-navigation-container">
@@ -32,7 +42,7 @@ function project360(source: string, title: string) {
     </div>
     
     <iframe width="100%" 
-        height="${window.innerWidth >= 1000 ? window.innerHeight - 80 - 88 : window.innerHeight - 69}px" 
+        height="${iframeHeight()}" 
         frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer"
         allowfullscreen scrolling="no" src="${source}">
     </iframe>

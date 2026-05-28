@@ -134,8 +134,12 @@ export default class ProjectController {
         if (ProjectController.currentPage == 0) {
             const projectStartButton = u('#project-start-button').first() as HTMLElement
 
+            var clickable = true;
             u(projectStartButton).on('click', () => {
-                ProjectController.navigate('forwards')
+                if (clickable){
+                    ProjectController.navigate('forwards')
+                    clickable = false;
+                }
             })
         }
 
