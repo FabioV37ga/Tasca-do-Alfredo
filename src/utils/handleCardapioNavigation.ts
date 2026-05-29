@@ -1,9 +1,11 @@
 import u from "umbrellajs";
 import changeSelectedCardapioPage, { appendPageItems, changePageTitle, changeSelectedItem } from "../views/cardapio.view.js";
+import { preloadCardapioImages } from "./preload.js";
 
 export class CardapioNavigation {
     static initialize() {
         CardapioNavigation.addNavigationHandlers()
+        preloadCardapioImages()
 
         const page = new URLSearchParams(window.location.search).get('page') || '0'
 

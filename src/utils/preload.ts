@@ -1,3 +1,4 @@
+import { itensDoCardapio, menuItem } from "../models/itemCardapio.js";
 import { updateProgressBar } from "./loadingScreen.js";
 import { getCurrentPage, getDeviceType } from "./windowFunctions.js";
 
@@ -80,7 +81,7 @@ function getAssetsToPreload(page: string, device: string) {
 }
 
 // Função principal chamada pelo app para pré-carregar imagens
-export async function preload(page: string, device: string) {
+export async function preload(page: string, device: string, log?: boolean) {
     const assetsToPreload = getAssetsToPreload(page, device)
 
     await Promise.all(
@@ -94,7 +95,9 @@ export async function preload(page: string, device: string) {
                 img.onload = () => {
                     // console.log(`Asset loaded: ${src.asset}`)
                     loadedAssets++
+
                     logProgress()
+
                     resolve()
                 }
 
@@ -106,6 +109,20 @@ export async function preload(page: string, device: string) {
         })
     )
     // console.log('Assets carregados.')
+}
+
+export function preloadCardapioImages() {
+    const items = itensDoCardapio as menuItem[][]
+    items.forEach((pageItems, page) => {
+        pageItems.forEach((item, index) => {
+            const img = new Image()
+            img.src = `../../pratos/0${page}-${index < 10 ? '0' + index : index}.png`
+            img.onload = () => {
+                console.log("loaded...")
+            }
+        })
+    })
+    // console.log(items)
 }
 
 /*

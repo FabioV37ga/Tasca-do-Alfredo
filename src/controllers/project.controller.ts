@@ -11,7 +11,6 @@ export default class ProjectController {
 
     static initialize() {
         // console.log("project initialized")
-
         ProjectController.addUserInteractions()
     }
 
