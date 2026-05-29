@@ -115,11 +115,19 @@ export function preloadCardapioImages() {
     const items = itensDoCardapio as menuItem[][]
     items.forEach((pageItems, page) => {
         pageItems.forEach((item, index) => {
-            const img = new Image()
-            img.src = `../../pratos/0${page}-${index < 10 ? '0' + index : index}.png`
-            img.onload = () => {
-                console.log("loaded...")
-            }
+            new Promise<void>((resolve) => {
+                const img = new Image()
+                img.src = `../../pratos/0${page}-${index < 10 ? '0' + index : index}.png`
+                img.onload = () => {
+                    console.log("loaded...")
+                    resolve()
+                }
+
+                img.onerror = () =>{
+                    // console.warn(`Falha ao carregar asset: ../../pratos/0${page}-${index < 10 ? '0' + index : index}.png`)
+                    resolve()
+                }
+            })
         })
     })
     // console.log(items)
