@@ -1,11 +1,11 @@
 import u from "umbrellajs";
 import changeSelectedCardapioPage, { appendPageItems, changePageTitle, changeSelectedItem } from "../views/cardapio.view.js";
-import { preloadCardapioImages } from "./preload.js";
+import { preload, preloadCardapioImages } from "./preload.js";
 
 export class CardapioNavigation {
     static initialize() {
         CardapioNavigation.addNavigationHandlers()
-        preloadCardapioImages()
+        preloadCardapioImages("0")
 
         const page = new URLSearchParams(window.location.search).get('page') || '0'
 
@@ -41,6 +41,7 @@ export class CardapioNavigation {
 
     static setPage(page: string) {
         // Muda a página do cardápio, o título da página e os itens exibidos de acordo com a página selecionada
+        preloadCardapioImages(page)
         changeSelectedCardapioPage(page)
         changePageTitle(page)
         appendPageItems(page)
