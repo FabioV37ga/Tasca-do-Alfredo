@@ -12,7 +12,7 @@ interface secao {
     title: string;
 }
 
-type menuItem = itemDoCardapio | secao
+export type menuItem = itemDoCardapio | secao
 
 export function sectionModel(section: secao) {
     return html`

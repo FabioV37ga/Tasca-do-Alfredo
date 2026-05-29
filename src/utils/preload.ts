@@ -1,3 +1,4 @@
+import { itensDoCardapio, menuItem } from "../models/itemCardapio.js";
 import { updateProgressBar } from "./loadingScreen.js";
 import { getCurrentPage, getDeviceType } from "./windowFunctions.js";
 
@@ -45,7 +46,12 @@ const desktopAssets: assetList[] = [
     { asset: '/desktop-sobre-lower-icon-1.png', page: 'sobre' },
     { asset: '/desktop-sobre-lower-icon-2.png', page: 'sobre' },
     { asset: '/desktop-sobre-lower-icon-3.png', page: 'sobre' },
-    { asset: '/texture-sobre.png', page: 'sobre' }
+    { asset: '/texture-sobre.png', page: 'sobre' },
+    { asset: '/pratos/00-00.png', page: 'cardapio' },
+    { asset: '/pratos/01-00.png', page: 'cardapio' },
+    { asset: '/pratos/02-01.png', page: 'cardapio' },
+    { asset: '/pratos/03-01.png', page: 'cardapio' },
+    { asset: '/pratos/04-00.png', page: 'cardapio' }
 ]
 
 // Descobre a página atual a partir da URL
@@ -73,6 +79,7 @@ function getAssetsToPreload(page: string, device: string) {
         )
     }
 
+    // console.log(assetsToPreload)
     console.log(`(Pre-Load) \n Total assets: ${assetsToPreload.length} \n Page: ${page} \n Device: ${device}`)
     assetLength = assetsToPreload.length
 
@@ -80,7 +87,7 @@ function getAssetsToPreload(page: string, device: string) {
 }
 
 // Função principal chamada pelo app para pré-carregar imagens
-export async function preload(page: string, device: string) {
+export async function preload(page: string, device: string, log?: boolean) {
     const assetsToPreload = getAssetsToPreload(page, device)
 
     await Promise.all(
@@ -94,7 +101,9 @@ export async function preload(page: string, device: string) {
                 img.onload = () => {
                     // console.log(`Asset loaded: ${src.asset}`)
                     loadedAssets++
+
                     logProgress()
+
                     resolve()
                 }
 
@@ -106,6 +115,29 @@ export async function preload(page: string, device: string) {
         })
     )
     // console.log('Assets carregados.')
+}
+
+export function preloadCardapioImages(page: string) {
+    if (deviceType === 'desktop' || deviceType === 'ipad') {
+        const pageItems = itensDoCardapio[parseInt(page)] as menuItem[]
+
+        pageItems.forEach((item, index) => {
+            new Promise<void>((resolve) => {
+                const img = new Image()
+                img.src = `../../pratos/0${page}-${index < 10 ? '0' + index : index}.png`
+                img.onload = () => {
+                    console.log("loaded...")
+                    resolve()
+                }
+
+                img.onerror = () => {
+                    // console.warn(`Falha ao carregar asset: ../../pratos/0${page}-${index < 10 ? '0' + index : index}.png`)
+                    resolve()
+                }
+            })
+        })
+    }
+    // console.log(items)
 }
 
 /*
