@@ -46,7 +46,11 @@ const desktopAssets: assetList[] = [
     { asset: '/desktop-sobre-lower-icon-1.png', page: 'sobre' },
     { asset: '/desktop-sobre-lower-icon-2.png', page: 'sobre' },
     { asset: '/desktop-sobre-lower-icon-3.png', page: 'sobre' },
-    { asset: '/texture-sobre.png', page: 'sobre' }
+    { asset: '/texture-sobre.png', page: 'sobre' },
+    { asset: '/pratos/00-00.png', page: 'cardapio' },
+    { asset: '/pratos/02-01.png', page: 'cardapio' },
+    { asset: '/pratos/03-01.png', page: 'cardapio' },
+    { asset: '/pratos/04-00.png', page: 'cardapio' }
 ]
 
 // Descobre a página atual a partir da URL
