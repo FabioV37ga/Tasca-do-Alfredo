@@ -102,6 +102,7 @@ export const projectPages: Array<() => HTMLElement> = [
     () => project360('https://kuula.co/share/LvzfM?logo=1&info=1&fs=0&vr=0&autorotate=0.63&thumbs=1', 'Salão Externo'),
     () => project360('https://kuula.co/share/Lvzfd?logo=1&info=1&fs=0&vr=0&autorotate=0.63&thumbs=1', 'Banheiros'),
     strategies,
+    endingVideo
 ]
 
 interface strategy {
@@ -110,6 +111,7 @@ interface strategy {
     icon: string;
     image: string;
     isSelected: boolean;
+    imageOffSet?: number;
 }
 
 function paragraph(paragraph: string): HTMLElement {
@@ -129,7 +131,7 @@ export const strategiesList: strategy[] = [
             paragraph('Separação física  entre cozinhae salão')
         ],
         icon: '/strategy-ico-0.png',
-        image: 'olfativo.jpg',
+        image: 'olfativo.png',
         isSelected: true
     },
     {
@@ -141,8 +143,9 @@ export const strategiesList: strategy[] = [
             paragraph('Ambientes mais confortáveis para conversas e permanência')
         ],
         icon: '/strategy-ico-1.png',
-        image: 'acustico.jpg',
-        isSelected: false
+        image: 'acustico.png',
+        isSelected: false,
+        imageOffSet: -215
     },
     {
         title: 'Conforto Funcional',
@@ -153,8 +156,9 @@ export const strategiesList: strategy[] = [
             paragraph('Mobiliário ergonômico para clientes e equipe')
         ],
         icon: '/strategy-ico-2.png',
-        image: 'funcional.jpg',
-        isSelected: false
+        image: 'funcional.png',
+        isSelected: false,
+        imageOffSet: -275
     },
     {
         title: 'Conforto Visual',
@@ -165,7 +169,7 @@ export const strategiesList: strategy[] = [
             paragraph('Valorização da materialidade e dos tons terrosos')
         ],
         icon: '/strategy-ico-3.png',
-        image: 'visual.jpg',
+        image: 'visual.png',
         isSelected: false
     },
     {
@@ -177,11 +181,30 @@ export const strategiesList: strategy[] = [
             paragraph('Controle da incidência solar com sombreamento')
         ],
         icon: '/strategy-ico-4.png',
-        image: 'termico.jpg',
+        image: 'termico.png',
         isSelected: false
     },
 ]
 
+
+function endingVideo(){
+    return html`
+    <div class="project-ending-video-container">
+        <div class="project-ending-video-background"></div>
+        <div class="project-ending-text-1">
+            <span>Obrigado!</span>
+        </div>
+        <div class="project-alfredo">
+            <img src="alfredo.png" alt=""> 
+        </div>
+        <div class="video-container">
+            <video class="video-timelapse" width="100%" height="100%" autoplay muted playsinline>
+                <source src="timelapse.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    `
+}
 
 /*
 <iframe width="100%" height="640" frameborder="0" allow="xr-spatial-tracking; gyroscope; accelerometer" allowfullscreen scrolling="no" src="https://kuula.co/share/LvJ8Z?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1"></iframe>

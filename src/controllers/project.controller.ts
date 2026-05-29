@@ -1,6 +1,6 @@
 import u from 'umbrellajs'
 import { strategiesList, projectPages } from '../models/projectModels.js';
-import { welcome, strategies } from '../animations/projectAnimations.js'
+import { welcome, strategies, ending } from '../animations/projectAnimations.js'
 import { Animation, AnimationObject } from '../animations/animation.js'
 
 export default class ProjectController {
@@ -114,16 +114,22 @@ export default class ProjectController {
 
         }
 
-        // if (ProjectController.currentPage > 0 && ProjectController.currentPage < 4) {
-        //     background.style.opacity = '1'
-        //     console.log("Page between 0 and 4 rendered, darkening background")
-        // }else{
-        //     console.log("Page outside 0-4 rendered, brightening background")
-        //     background.style.opacity = '0.8'
-        // }
+        if (ProjectController.currentPage == 5) {
+            const background = u('.project-ending-video-background').first() as HTMLElement
+
+            await Animation.animateAndWait(ending.hideVideo, background, 1500)
+
+            // const video = u(".video-timelapse").first() as HTMLElement
+            // video.remove()
+
+            const thanks = u(".project-ending-text-1").first() as HTMLElement
+            Animation.animate(ending.showThanks, thanks, 100)
+
+            const alfredo = u(".project-alfredo").first() as HTMLElement
+            await Animation.animateAndWait(ending.showFinalPicture, alfredo, 1900)
 
 
-
+        }
 
         // console.log("adicionando interações da página " + ProjectController.currentPage)
         ProjectController.addUserInteractions()
@@ -136,7 +142,7 @@ export default class ProjectController {
 
             var clickable = true;
             u(projectStartButton).on('click', () => {
-                if (clickable){
+                if (clickable) {
                     ProjectController.navigate('forwards')
                     clickable = false;
                 }
@@ -210,6 +216,16 @@ export default class ProjectController {
             ProjectController.strategyPage = parseInt(direction);
             container.style.backgroundImage = `url(../../estrategias-fotos/${strategiesList[ProjectController.strategyPage].image})`
         }
+
+        if (strategiesList[ProjectController.strategyPage].imageOffSet) {
+            console.log("has offset")
+            container.style.backgroundPositionY = strategiesList[ProjectController.strategyPage].imageOffSet + "px"
+        } else {
+            console.log("hasnt offset")
+            container.style.backgroundPositionY = 'center'
+        }
+
+
         console.log(strategiesList[ProjectController.strategyPage])
         const strategyItems = u('.strategy-item').nodes as HTMLElement[]
         const navigationItems = u('.navigation-item').nodes as HTMLElement[]

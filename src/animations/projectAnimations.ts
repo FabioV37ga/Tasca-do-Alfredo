@@ -130,6 +130,57 @@ const appear: AnimationObject = {
     }
 }
 
+const hideVideo: AnimationObject = {
+    isPlaying: false,
+    animation: (element: HTMLElement, delay: number) => {
+        hideVideo.isPlaying = true;
+        return animate(element, {
+            opacity: [0, 1],
+            duration: 1000,
+            delay: delay,
+            easing: 'linear',
+            onComplete: () => {
+                hideVideo.isPlaying = false;
+            }
+        })
+    }
+}
+
+const showThanks: AnimationObject = {
+    isPlaying: false,
+    animation: (element: HTMLElement, delay: number) => {
+        showThanks.isPlaying = true;
+        return animate(element, {
+            display: 'block',
+            opacity: [0, 1, 1, 0],
+            duration: 2500,
+            delay: delay,
+            easing: 'linear',
+            onComplete: () => {
+                showThanks.isPlaying = false;
+            }
+        })
+    }
+}
+
+const showFinalPicture: AnimationObject = {
+    isPlaying: false,
+    animation: (element: HTMLElement, delay: number) => {
+        showFinalPicture.isPlaying = true;
+        return animate(element, {
+            display: 'block',
+            opacity: [0, 1],
+            duration: 1000,
+            delay: delay,
+            easing: 'linear',
+            onComplete: () => {
+                showFinalPicture.isPlaying = false;
+            }
+        })
+    }
+}
+
 
 export const welcome = { fadeOut, darken, brighten }
 export const strategies =  { showTitleSpan, hideTitle, slideUp, appear }
+export const ending = { hideVideo, showThanks, showFinalPicture }
