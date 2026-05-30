@@ -1,22 +1,19 @@
 🔴🟡🟢
 --------
 
-
-🟡 1. Desenvolver aba 'Contato'
-
-🟢 2. Desenvolver aba 'Projeto"
-    🟢 2.1 Projeto precisa incluir iframe com vizualização do 360º
+🟢 1. Desenvolver aba 'Projeto"
+    🟢 1.1 Projeto precisa incluir iframe com vizualização do 360º
         🟢 → Arrumar hrefs quando o menino mandar os certos
         🟢 → fazer animação de volta para página 0 (pág. inicial)
-    🟢 3.2 Projeto precisa incluir imagens e especificações do projeto da tasca
+    🟢 1.2 Projeto precisa incluir imagens e especificações do projeto da tasca
         🟢 → Colocar imagens definitivas de estrategias quando a Marcella mandar
-    🟢 3.3 Desenvolver responsividade
+    🟢 1.3 Desenvolver responsividade
         🟢 → ipad
         🟢 → desktop
-    🟢 3.4 Terminar tela da foto do alfredo, finalização com botão de navegar pra trás
+    🟢 1.4 Terminar tela da foto do alfredo, finalização com botão de navegar pra trás
             e botão de reiniciar.
-           🟢 3.4.1 Fazer mobile first (display flex just center no pai)
-           🟢 3.4.2 fazer responsividade ipad e desktop
+           🟢 1.4.1 Fazer mobile first (display flex just center no pai)
+           🟢 1.4.2 fazer responsividade ipad e desktop
 
 🔴 3. explicar o que diabos é alheira na pagina cardapio
 
