@@ -36,7 +36,7 @@ export default class ProjectController {
 
             await ProjectController.renderPage()
             // console.log("navegou para " + ProjectController.currentPage)
-        }else{
+        } else {
             await ProjectController.hidePage()
             ProjectController.currentPage = parseInt(direction)
             await ProjectController.renderPage()
@@ -123,6 +123,7 @@ export default class ProjectController {
         if (ProjectController.currentPage == 5) {
             const background = u('.project-ending-video-background').first() as HTMLElement
 
+            console.log("video carregado, iniciando animação de saída")
             await Animation.animateAndWait(ending.hideVideo, background, 1500)
 
             // const video = u(".video-timelapse").first() as HTMLElement
@@ -139,6 +140,7 @@ export default class ProjectController {
             navigationButtons.forEach((button) => {
                 Animation.animate(strategies.appear, button as HTMLElement, 50)
             })
+
 
         }
 
@@ -243,7 +245,7 @@ export default class ProjectController {
         }
 
         const device = getDeviceType(window.innerWidth)
-    
+
         if (strategiesList[ProjectController.strategyPage].imageOffSet || strategiesList[ProjectController.strategyPage].desktopImageOffSet) {
             switch (device) {
                 case 'mobile':
@@ -261,10 +263,11 @@ export default class ProjectController {
                         container.style.backgroundPositionY = strategiesList[ProjectController.strategyPage].desktopImageOffSet + "px"
                     }
             }
-        }else{
+        } else {
             console.log("sem offset para essa estratégia")
+            container.style.backgroundPositionY = "center"
         }
-        
+
 
 
         console.log(strategiesList[ProjectController.strategyPage])

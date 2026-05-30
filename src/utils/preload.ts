@@ -30,7 +30,7 @@ const generalAssets: assetList[] = [
     { asset: '/cardapio-page-3.png', page: 'cardapio' },
     { asset: '/cardapio-page-4.png', page: 'cardapio' },
     { asset: '/cardapio-marker.png', page: 'cardapio' },
-    { asset: '/timelapse.mp4', page: 'projeto' },
+    // { asset: '/timelapse.mp4', page: 'projeto' },
     { asset: '/estrategias-fotos/olfativo.png', page: 'projeto' },
     { asset: '/estrategias-fotos/funcional.png', page: 'projeto' },
     { asset: '/estrategias-fotos/acustico.png', page: 'projeto' },

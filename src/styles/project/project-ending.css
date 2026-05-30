@@ -23,7 +23,7 @@
 .video-container {
     height: 100%;
     width: 100%;
-    background: white;
+    background: black;
     object-fit: cover;
 }
 
