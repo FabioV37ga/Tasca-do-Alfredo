@@ -211,7 +211,7 @@ function endingVideo() {
             <img src="alfredo.png" alt=""> 
         </div>
         <div class="video-container">
-            <video class="video-timelapse" width="100%" height="100%" volume="0" autoplay muted playsinline>
+            <video class="video-timelapse" width="100%" height="100%" autoplay muted playsinline oncanplay="this.muted=true; this.volume=0;">
                 <source src="timelapse.mp4" type="video/mp4">
             </video>
         </div>

@@ -78,6 +78,22 @@ export default class ProjectController {
 
         container.append(projectPages[ProjectController.currentPage]())
 
+        // ensure any ending video is muted and volume set to 0 after insertion
+        const endingVideoEl = u('.video-timelapse').first() as HTMLVideoElement
+        if (endingVideoEl) {
+            try {
+                endingVideoEl.defaultMuted = true
+                endingVideoEl.muted = true
+                endingVideoEl.volume = 0
+                // restart playback to ensure muted state takes effect
+                endingVideoEl.pause()
+                endingVideoEl.currentTime = 0
+                endingVideoEl.play().catch(() => { /* autoplay may be blocked */ })
+            } catch (e) {
+                console.warn('Could not force mute video', e)
+            }
+        }
+
         if (ProjectController.currentPage == 0 || ProjectController.currentPage == 4) {
             // console.log(background)
             background.style.opacity = '0.8'
