@@ -134,6 +134,11 @@ export default class ProjectController {
             const alfredo = u(".project-alfredo").first() as HTMLElement
             await Animation.animateAndWait(ending.showFinalPicture, alfredo, 1900)
 
+            const navigationButtons = u(".ending-nav-button").nodes as HTMLElement[]
+
+            navigationButtons.forEach((button) => {
+                Animation.animate(strategies.appear, button as HTMLElement, 50)
+            })
 
         }
 

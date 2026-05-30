@@ -30,6 +30,18 @@ const generalAssets: assetList[] = [
     { asset: '/cardapio-page-3.png', page: 'cardapio' },
     { asset: '/cardapio-page-4.png', page: 'cardapio' },
     { asset: '/cardapio-marker.png', page: 'cardapio' },
+    { asset: '/timelapse.mp4', page: 'projeto' },
+    { asset: '/estrategias-fotos/olfativo.png', page: 'projeto' },
+    { asset: '/estrategias-fotos/funcional.png', page: 'projeto' },
+    { asset: '/estrategias-fotos/acustico.png', page: 'projeto' },
+    { asset: '/estrategias-fotos/visual.png', page: 'projeto' },
+    { asset: '/estrategias-fotos/termico.png', page: 'projeto' },
+    { asset: '/estrategias-fotos/strategy-ico-0.png', page: 'projeto' },
+    { asset: '/estrategias-fotos/strategy-ico-1.png', page: 'projeto' },
+    { asset: '/estrategias-fotos/strategy-ico-2.png', page: 'projeto' },
+    { asset: '/estrategias-fotos/strategy-ico-3.png', page: 'projeto' },
+    { asset: '/estrategias-fotos/strategy-ico-4.png', page: 'projeto' },
+    { asset: '/alfredo.png', page: 'projeto' },
 ]
 
 // Assets adicionais específicos para dispositivos móveis
