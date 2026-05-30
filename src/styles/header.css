@@ -45,6 +45,10 @@ header {
     /* background: blue; */
 }
 
+.mobile-nav-item{
+    user-select: none;
+}
+
 #header-logo-badge {
     width: 25px;
     margin-bottom: 2px;
@@ -155,6 +159,7 @@ header {
         position: relative;
         padding: 20px 15px;
         border-radius: 20px;
+        user-select: none;
     }
 
     #selected::before {
