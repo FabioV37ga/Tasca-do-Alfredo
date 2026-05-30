@@ -184,6 +184,10 @@ export default class ProjectController {
                 })
             })
         }
+
+        else if (ProjectController.currentPage == 5) {
+            
+        }
     }
 
     static navigateStrategies(direction: string) {

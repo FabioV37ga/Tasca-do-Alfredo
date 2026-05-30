@@ -20,9 +20,9 @@ export function projectStart() {
 var iframeHeight = () => {
     if (window.innerWidth < 1000) {
         return `${window.innerHeight - 69}px`;
-    }else if (window.innerWidth >= 1400) {
+    } else if (window.innerWidth >= 1400) {
         return '100%';
-    }else{
+    } else {
         return `${window.innerHeight - 80 - 76}px`;
     }
 }
@@ -187,10 +187,18 @@ export const strategiesList: strategy[] = [
 ]
 
 
-function endingVideo(){
+function endingVideo() {
     return html`
     <div class="project-ending-video-container">
         <div class="project-ending-video-background"></div>
+        <div class="ending-navigation">
+            <a id="ending-nav-backwards" class="ending-nav-button">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+            <a id="ending-nav-forwards" class="ending-nav-button">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
         <div class="project-ending-text-1">
             <span>Obrigado!</span>
         </div>
