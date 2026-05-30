@@ -93,6 +93,8 @@ footer {
     max-height: 23px;
 }
 
+
+
 #footer-info-contact a {
     background: white;
     border-radius: 100%;
@@ -103,6 +105,7 @@ footer {
     text-decoration: none;
     color: var(--green);
     margin-right: 5px;
+    z-index: 4
 }
 
 
