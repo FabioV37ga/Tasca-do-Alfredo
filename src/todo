@@ -1,6 +1,10 @@
-🔴 1. Desenvolver aba 'Contato'
+🔴🟡🟢
+--------
 
-🟡 2. Desenvolver aba 'Projeto"
+
+🟡 1. Desenvolver aba 'Contato'
+
+🟢 2. Desenvolver aba 'Projeto"
     🟢 2.1 Projeto precisa incluir iframe com vizualização do 360º
         🟢 → Arrumar hrefs quando o menino mandar os certos
         🟢 → fazer animação de volta para página 0 (pág. inicial)
@@ -9,10 +13,10 @@
     🟢 3.3 Desenvolver responsividade
         🟢 → ipad
         🟢 → desktop
-    🟡 3.4 Terminar tela da foto do alfredo, finalização com botão de navegar pra trás
+    🟢 3.4 Terminar tela da foto do alfredo, finalização com botão de navegar pra trás
             e botão de reiniciar.
-            3.4.1 Fazer mobile first (display flex just center no pai)
-            3.4.2 fazer responsividade ipad e desktop
+           🟢 3.4.1 Fazer mobile first (display flex just center no pai)
+           🟢 3.4.2 fazer responsividade ipad e desktop
 
 🔴 3. explicar o que diabos é alheira na pagina cardapio
 
@@ -21,7 +25,7 @@
 
 🔴 5. (ipad/desktop) Implementar seletor visual para itens selecionados no cardápio em display.
 
-🔴 6. Trocar fotos da aba sobre 
-        🔴 → Alfredo para foto original
-        🔴 → fachada outra foto do avô 
-        🔴 → Aqui a conversa é de casa
+🟡 6. Trocar fotos da aba sobre 
+        🟢 → Alfredo para foto original
+        🟡 → fachada outra foto do avô 
+        🟡 → Aqui a conversa é de casa
