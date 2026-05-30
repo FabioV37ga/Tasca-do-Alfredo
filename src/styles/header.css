@@ -149,10 +149,12 @@ header {
         text-decoration: none;
         color: white;
         font-family: 'qs-base';
-        margin-right: 60px;
+        margin-right: 45px;
         font-size: 21px;
         text-transform: uppercase;
         position: relative;
+        padding: 20px 15px;
+        border-radius: 20px;
     }
 
     #selected::before {
@@ -161,6 +163,13 @@ header {
         height: 3px;
         background: var(--yellow);
         width: 30px;
+        bottom: 10px;
 
+    }
+
+    .desktop-navigation-button:hover {
+        transform: translateY(2px);
+        background: var(--darkblue);
+        /* font-weight: 600; */
     }
 }
