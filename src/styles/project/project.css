@@ -47,6 +47,19 @@ header {
     z-index: 5;
 }
 
+#menu-container{
+    background: black;
+    height: 100dvh;
+}
+
+#collapsable-menu{
+    background: black;
+}
+
+#outside-menu{
+    height: 100dvh
+}
+
 body {
     display: flex;
     flex-direction: column;

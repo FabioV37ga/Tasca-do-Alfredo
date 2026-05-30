@@ -19,7 +19,7 @@ export function projectStart() {
 
 var iframeHeight = () => {
     if (window.innerWidth < 1000) {
-        return `${window.innerHeight - 69}px`;
+        return `${window.innerHeight - 140}px`;
     } else if (window.innerWidth >= 1400) {
         return '100%';
     } else {
@@ -112,6 +112,7 @@ interface strategy {
     image: string;
     isSelected: boolean;
     imageOffSet?: number;
+    desktopImageOffSet?: number;
 }
 
 function paragraph(paragraph: string): HTMLElement {
@@ -145,7 +146,8 @@ export const strategiesList: strategy[] = [
         icon: '/strategy-ico-1.png',
         image: 'acustico.png',
         isSelected: false,
-        imageOffSet: -215
+        imageOffSet: -150,
+        desktopImageOffSet: -215
     },
     {
         title: 'Conforto Funcional',
@@ -158,7 +160,8 @@ export const strategiesList: strategy[] = [
         icon: '/strategy-ico-2.png',
         image: 'funcional.png',
         isSelected: false,
-        imageOffSet: -275
+        imageOffSet: -150,
+        desktopImageOffSet: -275
     },
     {
         title: 'Conforto Visual',
@@ -192,12 +195,14 @@ function endingVideo() {
     <div class="project-ending-video-container">
         <div class="project-ending-video-background"></div>
         <div class="ending-navigation">
-            <a id="ending-nav-backwards" class="ending-nav-button">
-                <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            </a>
-            <a id="ending-nav-forwards" class="ending-nav-button">
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </a>
+            <div class="navigation-container">
+                <a id="ending-nav-backwards" class="ending-nav-button">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </a>
+                <a id="ending-nav-forwards" class="ending-nav-button">
+                    <i class="fa fa-reply" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
         <div class="project-ending-text-1">
             <span>Obrigado!</span>
@@ -206,7 +211,7 @@ function endingVideo() {
             <img src="alfredo.png" alt=""> 
         </div>
         <div class="video-container">
-            <video class="video-timelapse" width="100%" height="100%" autoplay muted playsinline>
+            <video class="video-timelapse" width="100%" height="100%" volume="0" autoplay muted playsinline>
                 <source src="timelapse.mp4" type="video/mp4">
             </video>
         </div>

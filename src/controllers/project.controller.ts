@@ -2,6 +2,7 @@ import u from 'umbrellajs'
 import { strategiesList, projectPages } from '../models/projectModels.js';
 import { welcome, strategies, ending } from '../animations/projectAnimations.js'
 import { Animation, AnimationObject } from '../animations/animation.js'
+import { getDeviceType } from '../utils/windowFunctions.js';
 
 export default class ProjectController {
     static currentPage = 0;
@@ -35,6 +36,10 @@ export default class ProjectController {
 
             await ProjectController.renderPage()
             // console.log("navegou para " + ProjectController.currentPage)
+        }else{
+            await ProjectController.hidePage()
+            ProjectController.currentPage = parseInt(direction)
+            await ProjectController.renderPage()
         }
         console.log("current page: " + ProjectController.currentPage)
     }
@@ -86,13 +91,15 @@ export default class ProjectController {
 
 
         if (ProjectController.currentPage == 4) {
-            container.style.backgroundImage = `url(../../estrategias-fotos/${strategiesList[ProjectController.strategyPage].image})`
+            // container.style.backgroundImage = `url(../../estrategias-fotos/${strategiesList[ProjectController.strategyPage].image})`
+            container.style.backgroundImage = 'url("../../estrategias-fotos/olfativo.png")'
 
             const strategiesTitleSpans = u('.strategies-title-span').nodes as HTMLElement[]
             // console.log(strategiesTitleSpans)
             for (const span of strategiesTitleSpans) {
                 await Animation.animateAndWait(strategies.showTitleSpan, span, 50)
             }
+
 
             const title = strategiesTitleSpans[0].parentElement as HTMLElement
 
@@ -186,7 +193,17 @@ export default class ProjectController {
         }
 
         else if (ProjectController.currentPage == 5) {
-            
+            const navigateBackwardsButton = u('#ending-nav-backwards').first() as HTMLElement
+
+            u(navigateBackwardsButton).on('click', () => {
+                ProjectController.navigate('backwards')
+            })
+
+            const navigateForwardsButton = u('#ending-nav-forwards').first() as HTMLElement
+
+            u(navigateForwardsButton).on('click', () => {
+                ProjectController.navigate('0')
+            })
         }
     }
 
@@ -220,13 +237,29 @@ export default class ProjectController {
             container.style.backgroundImage = `url(../../estrategias-fotos/${strategiesList[ProjectController.strategyPage].image})`
         }
 
-        if (strategiesList[ProjectController.strategyPage].imageOffSet) {
-            console.log("has offset")
-            container.style.backgroundPositionY = strategiesList[ProjectController.strategyPage].imageOffSet + "px"
-        } else {
-            console.log("hasnt offset")
-            container.style.backgroundPositionY = 'center'
+        const device = getDeviceType(window.innerWidth)
+    
+        if (strategiesList[ProjectController.strategyPage].imageOffSet || strategiesList[ProjectController.strategyPage].desktopImageOffSet) {
+            switch (device) {
+                case 'mobile':
+                    if (strategiesList[ProjectController.strategyPage].imageOffSet) {
+                        container.style.backgroundPositionY = strategiesList[ProjectController.strategyPage].imageOffSet + "px"
+                    }
+                    break;
+                case 'ipad':
+                    if (strategiesList[ProjectController.strategyPage].desktopImageOffSet) {
+                        container.style.backgroundPositionY = strategiesList[ProjectController.strategyPage].desktopImageOffSet + "px"
+                    }
+                    break;
+                case 'desktop':
+                    if (strategiesList[ProjectController.strategyPage].desktopImageOffSet) {
+                        container.style.backgroundPositionY = strategiesList[ProjectController.strategyPage].desktopImageOffSet + "px"
+                    }
+            }
+        }else{
+            console.log("sem offset para essa estratégia")
         }
+        
 
 
         console.log(strategiesList[ProjectController.strategyPage])
