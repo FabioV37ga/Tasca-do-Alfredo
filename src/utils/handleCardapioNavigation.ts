@@ -70,7 +70,14 @@ export class CardapioNavigation {
             selectedItem = u(".cardapio-page-foodItem").first() as HTMLElement
         } else {
             selectedItem = element
+
         }
+        
+        const items = u(".cardapio-page-foodItem").nodes as HTMLElement[]
+        items.forEach(item => {
+            item.classList.remove("selected-item")
+        });
+        selectedItem.classList.add("selected-item")
 
         var itemIndex = parseInt(selectedItem.getAttribute("value") as string)
         changeSelectedItem(itemIndex, page)

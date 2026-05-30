@@ -79,5 +79,12 @@ export function changeSelectedItem(item: number, page: number){
     itemTitleElement.textContent = selectedItem.title
 
     const itemDescriptionElement = u(".aside-item-description").first() as HTMLElement
-    itemDescriptionElement.textContent = 'text' in selectedItem ? selectedItem.text : ''
+
+    if ('text' in selectedItem){
+        if (selectedItem.desktopText){
+            itemDescriptionElement.textContent = selectedItem.desktopText
+        } else {
+            itemDescriptionElement.textContent = selectedItem.text
+        }
+    }
 }

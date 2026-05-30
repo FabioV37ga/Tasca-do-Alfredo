@@ -211,6 +211,8 @@ main {
     text-transform: uppercase;
     font-family: 'quay';
     margin-bottom: 5px;
+    width: fit-content;
+    position: relative;
 }
 
 .cardapio-page-foodItem p {
@@ -341,6 +343,16 @@ main {
 
     .foodItem-title {
         font-size: 20px !important;
+    }
+
+    .cardapio-page-foodItem.selected-item .foodItem-title::before {
+        content: '←';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        right: -30px;
+        top: -3px;
+        color: var(--brown)
     }
 
     .foodItem-text-container p {

@@ -15,12 +15,12 @@
            🟢 1.4.1 Fazer mobile first (display flex just center no pai)
            🟢 1.4.2 fazer responsividade ipad e desktop
 
-🔴 3. explicar o que diabos é alheira na pagina cardapio
+🟢 3. explicar o que diabos é alheira na pagina cardapio
 
-🔴 4. implementar desktopText em itemCardapio.ts 
+🟢 4. implementar desktopText em itemCardapio.ts 
     (texto informativo para itens que não tem texto, para mostrar no display do desktop)
 
-🔴 5. (ipad/desktop) Implementar seletor visual para itens selecionados no cardápio em display.
+🟢 5. (ipad/desktop) Implementar seletor visual para itens selecionados no cardápio em display.
 
 🟡 6. Trocar fotos da aba sobre 
         🟢 → Alfredo para foto original

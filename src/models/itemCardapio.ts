@@ -4,6 +4,7 @@ interface itemDoCardapio {
     key: number;
     title: string;
     text: string;
+    desktopText?: string;
     price: number;
 }
 
@@ -81,6 +82,7 @@ const entradas: menuItem[] = [
         key: 5,
         title: 'Bolinho de Alheira',
         text: 'Inspirado nas tascas portuguesas onde os petiscos chegam antes da bebida terminar. Crocante por fora, intenso por dentro e feito para dividir.',
+        desktopText: "Embutido de pão, carne de aves e temperos, frito até ficar crocante por fora e intenso por dentro. Inspirado nas tascas portuguesas. feito para dividir.",
         price: 37,
     },
     {
@@ -251,36 +253,42 @@ const bebidas: menuItem[] = [
         key: 1,
         title: 'Chopp Brahma Claro',
         text: '',
+        desktopText: 'Chopp claro, gelado e servido na medida certa para acompanhar petiscos, conversas e tardes que não têm hora para acabar.',
         price: 16,
     },
     {
         key: 2,
         title: 'Chopp Brahma Black',
         text: '',
+        desktopText: 'Chopp escuro, perfeito para acompanhar pratos típicos.',
         price: 18,
     },
     {
         key: 3,
         title: 'Original',
         text: '',
+        desktopText: 'Cerveja leve, refrescante e feita para acompanhar frutos do mar e petiscos.',
         price: 18,
     },
     {
         key: 4,
         title: 'Heineken',
         text: '',
+        desktopText: 'Cerveja alemã, refrescante e perfeita para acompanhar qualquer refeição.',
         price: 15,
     },
     {
         key: 5,
         title: 'Stella Artois',
         text: '',
+        desktopText: 'Cerveja belga, refrescante e perfeita para acompanhar qualquer refeição.',
         price: 16,
     },
     {
         key: 6,
         title: 'Corona',
         text: '',
+        desktopText: 'Cerveja mexicana, refrescante e perfeita para acompanhar qualquer refeição.',
         price: 17,
     },
     {
@@ -404,12 +412,14 @@ const refrescos: menuItem[] = [
         key: 4,
         title: 'Água Mineral',
         text: '',
+        desktopText: 'Água mineral natural, servida gelada para acompanhar qualquer momento da refeição.',
         price: 6,
     },
     {
         key: 5,
         title: 'Água com Gás',
         text: '',
+        desktopText: 'Água com gás, servida gelada para acompanhar qualquer momento da refeição.',
         price: 7,
     },
     {
