@@ -31,6 +31,7 @@ export default defineConfig({
       'tascadoalfredo.onrender.com',
       'localhost',
       '0.0.0.0',
+      'marcellasol.vps-kinghost.net'
     ],
   },
 });
