@@ -16,7 +16,7 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "server": "http-server dist -p 80"
+    "server": "http-server dist -p 8080"
   },
   "dependencies": {
     "animejs": "^4.2.2",
