@@ -15,7 +15,8 @@
     "start": "vite",
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "http-server src -p 3000"
   },
   "dependencies": {
     "animejs": "^4.2.2",
