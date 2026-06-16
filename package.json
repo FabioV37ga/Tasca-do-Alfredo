@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "animejs": "^4.2.2",
+    "http-server": "^14.1.1",
     "nanohtml": "^1.10.0",
     "umbrellajs": "^3.3.3"
   },
