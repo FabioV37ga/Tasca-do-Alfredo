@@ -102,7 +102,9 @@ export const projectPages: Array<() => HTMLElement> = [
     () => project360('https://kuula.co/share/LvzfM?logo=1&info=1&fs=0&vr=0&autorotate=0.63&thumbs=1', 'Salão Externo'),
     () => project360('https://kuula.co/share/Lvzfd?logo=1&info=1&fs=0&vr=0&autorotate=0.63&thumbs=1', 'Banheiros'),
     strategies,
-    endingVideo
+    endingVideo,
+    articleViewer,
+    presentationViewer
 ]
 
 interface strategy {
@@ -200,7 +202,7 @@ function endingVideo() {
                     <i class="fa fa-arrow-left" aria-hidden="true"></i>
                 </a>
                 <a id="ending-nav-forwards" class="ending-nav-button">
-                    <i class="fa fa-reply" aria-hidden="true"></i>
+                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
@@ -215,6 +217,42 @@ function endingVideo() {
                 <source src="timelapse.mp4" type="video/mp4">
             </video>
         </div>
+    </div>
+    `
+}
+
+function articleViewer() {
+    return html`
+    <div class="project-pdf-viewer-container" style="height: 100%; width: 100%">
+        <div class="navigation-container">
+            <a id="pdf-nav-backwards" class="pdf-nav-button">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+            <h1>Artigo</h1>
+            <a id="pdf-nav-forwards" class="pdf-nav-button">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+        <iframe src="tcc-project.pdf">
+        </iframe>
+    </div>
+    `
+}
+
+function presentationViewer() {
+    return html`
+    <div class="project-pdf-viewer-container" style="height: 100%; width: 100%">
+        <div class="navigation-container">
+            <a id="pdf-nav-backwards" class="pdf-nav-button">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+            <h1>Apresentação</h1>
+            <a id="pdf-nav-forwards" class="pdf-nav-button">
+                <i class="fa fa-undo" aria-hidden="true"></i>
+            </a>
+        </div>
+        <iframe src="tcc-presentation.pdf">
+        </iframe>
     </div>
     `
 }

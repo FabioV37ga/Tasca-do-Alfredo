@@ -160,6 +160,10 @@ export default class ProjectController {
 
         }
 
+        if (ProjectController.currentPage == 6){
+            console.log("Página pdf 1")
+        }
+
         // console.log("adicionando interações da página " + ProjectController.currentPage)
         ProjectController.addUserInteractions()
 
@@ -223,6 +227,35 @@ export default class ProjectController {
             })
 
             const navigateForwardsButton = u('#ending-nav-forwards').first() as HTMLElement
+
+            u(navigateForwardsButton).on('click', () => {
+                // ProjectController.navigate('0')
+                ProjectController.navigate('forwards')
+            })
+        }
+
+        else if(ProjectController.currentPage == 6){
+            const navigateBackwardsButton = u('#pdf-nav-backwards').first() as HTMLElement
+
+            u(navigateBackwardsButton).on('click', () => {
+                ProjectController.navigate('backwards')
+            })
+
+            const navigateForwardsButton = u('#pdf-nav-forwards').first() as HTMLElement
+
+            u(navigateForwardsButton).on('click', () => {
+                ProjectController.navigate('forwards')
+            })
+        }
+
+        else if (ProjectController.currentPage == 7){
+            const navigateBackwardsButton = u('#pdf-nav-backwards').first() as HTMLElement
+            
+            u(navigateBackwardsButton).on('click', () => {
+                ProjectController.navigate('backwards')
+            })
+
+            const navigateForwardsButton = u('#pdf-nav-forwards').first() as HTMLElement
 
             u(navigateForwardsButton).on('click', () => {
                 ProjectController.navigate('0')

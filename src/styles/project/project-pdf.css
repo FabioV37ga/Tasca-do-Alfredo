@@ -1,0 +1,41 @@
+.project-pdf-viewer-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background: black;
+    justify-content: center;
+}
+
+.project-pdf-viewer-container iframe {
+    height: 100%;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.project-pdf-viewer-container .navigation-container {
+    position: absolute;
+    /* background: red; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#pdf-nav-backwards, #pdf-nav-forwards {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.project-pdf-viewer-container .navigation-container h1{
+    color: white;
+    font-family: "tropical";
+}
